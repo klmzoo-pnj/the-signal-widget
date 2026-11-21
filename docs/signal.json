@@ -1,31 +1,31 @@
 {
   "news": [
     {
-      "title": "États‑Unis : règle limitant l'accès distant aux puces IA pour firmes chinoises",
-      "category": "TECH · GÉOPOLITIQUE",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23529.pdf"
+      "title": "BIS : limites à l’accès distant des puces avancées",
+      "category": "INDUSTRIE · RÉGULATION",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors"
     },
     {
-      "title": "Trump, Xi et Poutine tiennent un sommet trilatéral inédit à Shenzhen",
-      "category": "GÉOPOLITIQUE · DIPLOMATIE",
-      "url": "https://www.lemonde.fr/international/live/2026/11/19/en-direct-guerre-en-ukraine-etats-unis-chine-et-russie-dans-une-position-unique-pour-reduire-les-arsenaux-nucleaires-affirme-donald-tump_6810982_3210.html"
+      "title": "Commission européenne : cyberattaque assistée par IA",
+      "category": "CYBER · SÉCURITÉ",
+      "url": "https://in.marketscreener.com/news/eu-commission-targeted-in-cyberattack-politico-reports-ce785eddd08bf727"
     },
     {
-      "title": "Ukraine : ISW publie l'analyse du 20 nov. — offensives russes sans gains significatifs",
-      "category": "SÉCURITÉ · CONFLIT",
-      "url": "https://understandingwar.org/research/russia-ukraine/russian-offensive-campaign-assessment-november-20-2026"
+      "title": "Anthropic : IPO $81,3 G, valorisation trillionnaire",
+      "category": "IA · MARCHÉS",
+      "url": "https://www.investing.com/news/stock-market-news/anthropics-blockbuster-debut-tests-wall-streets-faith-in-ai-boom-5041688"
     }
   ],
   "readings": [
     {
-      "title": "Computer chips: The 'Most Magnificent Things' (New Yorker)",
-      "source": "THE NEW YORKER",
-      "url": "https://www.newyorker.com/magazine/2026/10/26/computer-chips-are-the-most-magnificent-things-weve-ever-made"
+      "title": "A New Kind of Foreign Agent",
+      "source": "FOREIGN AFFAIRS",
+      "url": "https://www.foreignaffairs.com/articles/united-states/2026-11-11/new-kind-foreign-agent"
     },
     {
-      "title": "Huang’s SE‑Asia 'backdoor' to China — WSJ investigation",
-      "source": "WALL STREET JOURNAL",
-      "url": "https://www.wsj.com/tech/jensen-huang-backdoor-ai-data-centers-a5e4499d"
+      "title": "ARTEX and AI-Powered Red Teaming Tools",
+      "source": "PALO ALTO NETWORKS - UNIT42",
+      "url": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/"
     }
   ],
   "date": "2026-11-21",
