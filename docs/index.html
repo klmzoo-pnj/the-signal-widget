@@ -33,12 +33,11 @@
     .num{color:var(--gold);font-size:13px;padding-right:12px;vertical-align:middle}
     .datapoints{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
     .point{padding:22px;border:1px solid var(--line);border-radius:9px;background:#151f28}
-    .point .value{font-size:clamp(27px,3vw,38px);letter-spacing:-.045em;font-weight:780;color:var(--white);line-height:1.15}
-    .point h3{font-size:15px;line-height:1.4;margin:8px 0 12px}
-    .point p{font-size:13px;color:#DCE1E4;margin:10px 0;line-height:1.6}
-    .point .point-heading{color:var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:17px 0 3px}
-    .point .point-context{color:var(--muted)}
-    .point .source{margin-top:14px}
+    .point .value{font-size:clamp(29px,3.2vw,44px);letter-spacing:-.045em;font-weight:780;color:var(--white);line-height:1.08;overflow-wrap:anywhere}
+    .point .value.is-long{font-size:clamp(16px,2vw,21px);font-weight:700;line-height:1.34;letter-spacing:-.02em;color:var(--muted)}
+    .point h3{font-size:16px;line-height:1.4;margin:10px 0 12px;font-weight:650}
+    .point p{font-size:14px;color:#BAC3CA;margin:0;line-height:1.65}
+    .point .source{margin-top:18px}
     .editorial{border-left:3px solid var(--gold);padding:5px 0 5px 22px}.editorial h3{font-size:23px;margin:0 0 10px}
     .editorial p{color:#DCE1E4}
     .notice{color:var(--muted);font-size:14px;border:1px solid var(--line);padding:17px;border-radius:9px}
@@ -66,7 +65,7 @@ const signatures={
  'The Radar':['THE RADAR','Ce qui émerge, ce qui se prépare, ce qui pourrait compter demain.'],
  'Intelligence & Industrial Signals':['STRATEGIC INTELLIGENCE','Dans les coulisses de la puissance.'],
  'Data Points':['THE NUMBERS','Les chiffres, leurs comparaisons et ce qu’ils révèlent.'],
- 'Reading Room':['DEEP READING','Les enquêtes et analyses qui méritent votre temps.'],
+ 'Reading Room':['DEEP READING','Les enquêtes et grands récits que vous auriez regretté de manquer.'],
  'Editorial Intelligence':['THE BIG PICTURE','Relier les faits. Déceler les bascules.'],
  'The Briefing':['THE BRIEFING','Les actualités essentielles du jour.'],
  'The Reading Room':['DEEP READING','Les lectures qui méritent votre temps.']
@@ -98,10 +97,18 @@ async function load(){try{
  section(root,'03','Intelligence & Industrial Signals',data.intelligence||[],(p,x,i)=>stories(p,x,i));
  const dp=el('section');heading(dp,'04','Data Points');
  const grid=el('div','datapoints');(data.data_points||[]).forEach(item=>{
-   const box=el('div','point');box.append(el('div','value',item.value||''));box.append(el('h3',null,item.label||''));
-   if(item.context)box.append(el('p','point-context',item.context));
-   if(item.comparison){box.append(el('div','point-heading','La comparaison'));box.append(el('p',null,item.comparison));}
-   if(item.stakes){box.append(el('div','point-heading','L’enjeu'));box.append(el('p',null,item.stakes));}
+   const box=el('div','point');
+   // Anciennes éditions : une phrase en « value » devient un texte discret,
+   // jamais un titre gigantesque. Les nouvelles éditions seront limitées à 22 caractères.
+   const metric=String(item.value||'').trim();
+   const valueNode=el('div','value'+(metric.length>22?' is-long':''),metric);
+   box.append(valueNode);
+   box.append(el('h3',null,item.label||''));
+   // Un seul texte d'analyse : contexte, comparaison, puis enjeu.
+   const analysis=[item.context,item.comparison,item.stakes]
+     .filter(part=>typeof part==='string'&&part.trim())
+     .map(part=>part.trim()).join(' ');
+   if(analysis)box.append(el('p',null,analysis));
    link(box,item.url);grid.append(box)
  });dp.append(grid);root.append(dp);
  section(root,'05','Reading Room',data.reading_room||[],(p,x,i)=>stories(p,x,i,'why_read'));
