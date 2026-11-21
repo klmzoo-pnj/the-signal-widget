@@ -1,31 +1,195 @@
 {
+  "critical": [
+    {
+      "title": "Anthropic : IPO record et reflux du secteur IA",
+      "category": "marchés",
+      "summary": "Anthropic a réalisé l’introduction en Bourse la plus importante de l’histoire (offre record ~81 milliards $) mais ses actions ont ensuite reculé, accentuant la vente sur les valeurs liées à l’IA. Pourquoi ça compte : l’IPO testera la liquidité, la valorisation de l’écosystème IA et la capacité des clients à financer la forte demande en puces et centres de données.",
+      "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+    },
+    {
+      "title": "Compromission PyPI du package agent‑framework",
+      "category": "cybersécurité",
+      "summary": "Deux versions malveillantes (1.26.1 et 1.26.2) du package Python officiel Microsoft « agent‑framework » ont été publiées sur PyPI pendant ~55 minutes, vol potentiel de clés et tokens CI/CD. Pourquoi ça compte : attaque de la chaîne d’approvisionnement des développeurs, exposition possible de credentials cloud et risque de compromission de pipelines de production.",
+      "url": "https://github.com/advisories/GHSA-764m-3ppc-5m73"
+    },
+    {
+      "title": "Pannes majeures : Microsoft, FAA et perturbations nationales",
+      "category": "infrastructure & cybersécurité",
+      "summary": "Une série d’incidents récents a affecté Microsoft 365, le réseau de l’FAA et plusieurs services financiers/transport, provoquant retards et ground‑stop. Pourquoi ça compte : souligne la fragilité opérationnelle des systèmes critiques et relance les questions sur modernisation, redondance et résilience face aux risques technologiques et cyber.",
+      "url": "https://apnews.com/article/0c0f0cf4983a0f81ba88c4c4d2b8383f"
+    },
+    {
+      "title": "NVIDIA : CA T3 record — 115,8 milliards $",
+      "category": "technologie / marchés",
+      "summary": "NVIDIA a publié un chiffre d’affaires trimestriel exceptionnel (115,8 milliards $) porté par la demande en datacenters et GPU d’IA. Pourquoi ça compte : confirme la centralité des accélérateurs dans l’écosystème IA et expose la dépendance des marchés et startups à la disponibilité des capacités de calcul.",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
+    },
+    {
+      "title": "Détroit d’Hormuz : hausse des attaques et ralentissement du trafic",
+      "category": "géopolitique / chaîne d’approvisionnement",
+      "summary": "Une série d’attaques sur pétroliers et navires a freiné le trafic dans le détroit d’Hormuz, selon les autorités maritimes et reportages. Pourquoi ça compte : impact direct sur les flux énergétiques, augmentation des primes d’assurance maritime et risque de perturbation prolongée des routes d’approvisionnement globales.",
+      "url": "https://apnews.com/article/b71b1d25f3cff987b4b125196ecb4c3c"
+    }
+  ],
+  "radar": [
+    {
+      "title": "Bessent : pas d’autres restrictions sur ventes de puces",
+      "category": "politique / semiconducteurs",
+      "summary": "Le secrétaire au Trésor estime qu’il n’est pas nécessaire d’ajouter des restrictions supplémentaires aux exportations récentes de puces NVIDIA vers la Chine.",
+      "url": "https://apnews.com/article/88142455395552afe74caec3399a648b"
+    },
+    {
+      "title": "Confiance consommateurs (UMich) : 51,5 en novembre",
+      "category": "macroéconomie",
+      "summary": "L’indice final Michigan remonte à 51,5 en novembre, reflétant un regain d’optimisme post‑élections chez les ménages américains.",
+      "url": "https://isr.umich.edu/news-events/news-releases/sentiment-ticks-up-as-election-expected-to-usher-in-changes-to-economic-policy/"
+    },
+    {
+      "title": "ONU débat sur robots tueurs : pas d’engagement contraignant",
+      "category": "IA / gouvernance",
+      "summary": "Négociations à l’ONU aboutissent à davantage de discussions mais sans limitation internationale ferme sur les systèmes d’armes autonomes.",
+      "url": "https://apnews.com/article/ebe057d2a47cde53100970c8f648e7fa"
+    },
+    {
+      "title": "Série d’incidents : audition au Congrès sur les pannes",
+      "category": "infrastructure",
+      "summary": "Des auditions récapitulent les pannes récentes et écartent, pour l’instant, l’hypothèse d’une attaque coordonnée extérieure.",
+      "url": "https://apnews.com/article/ce63a22797c61ee53d88678000236c37"
+    },
+    {
+      "title": "OpenAI visé par plainte en Californie après hack Hugging Face",
+      "category": "cybersécurité / régulation",
+      "summary": "La Californie poursuit OpenAI, demandant des changements judiciaires suite à un incident de sécurité impliquant un transfert non prévu entre environnements.",
+      "url": "https://apnews.com/article/1dd7be56134b4f09fb2fb974803edc69"
+    },
+    {
+      "title": "United Airlines : mise à jour après la panne technique",
+      "category": "transport / opérations",
+      "summary": "United publie un compte‑rendu sur la résolution d’une panne ayant retardé des départs, distincte du ground‑stop national de l’FAA.",
+      "url": "https://united.mediaroom.com/news-releases?asPDF=1&item=125499"
+    },
+    {
+      "title": "Propos pour un comité spécial sur l’IA au Sénat US",
+      "category": "politique / IA",
+      "summary": "Proposition de création d’un comité spécial pour encadrer rapidement la régulation fédérale de l’IA si les démocrates conservent la majorité.",
+      "url": "https://apnews.com/article/047d0ab21237984701decd9ed5ced403"
+    },
+    {
+      "title": "Ralentissement du trafic maritime dans le Golfe persique",
+      "category": "logistique / énergie",
+      "summary": "Données maritimes confirment un repli du nombre de transits quotidiens par le détroit d’Hormuz depuis début novembre, après plusieurs attaques.",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_115_19-nov.pdf"
+    }
+  ],
+  "intelligence": [
+    {
+      "title": "Attaque balistique frappe la ville natale de Zelenskyy",
+      "category": "défense",
+      "summary": "Une attaque de missile a tué au moins deux personnes et fait de nombreux blessés dans la localité, illustrant l’escalade des frappes contre l’Ukraine.",
+      "url": "https://apnews.com/article/bfdee2ffadc2693e7338d6822e5356ef"
+    },
+    {
+      "title": "UKMTO : série d’incidents et conseils maritimes récents",
+      "category": "renseignement maritime",
+      "summary": "Le bulletin UKMTO documente attaques et incidents contre navires dans et autour du détroit d’Hormuz; avis de prudence pour les opérateurs commerciaux.",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_115_19-nov.pdf"
+    }
+  ],
+  "data_points": [
+    {
+      "label": "NVIDIA T3 revenus",
+      "value": "115.8 billion USD",
+      "context": "Chiffre d’affaires pour le troisième trimestre fiscal clos le 25 octobre 2026 (NVIDIA).",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
+    },
+    {
+      "label": "Produit levé par l’IPO d’Anthropic",
+      "value": "81.3 billion USD",
+      "context": "Montant levé lors de l’introduction en Bourse d’Anthropic (novembre 2026).",
+      "url": "https://apnews.com/article/fdca56f1cda70c9908899057e7e5916"
+    },
+    {
+      "label": "Valorisation maximale observée (Anthropic)",
+      "value": "2 trillion USD",
+      "context": "Valorisation de marché atteinte brièvement à l’ouverture de la cotation le 19 novembre 2026.",
+      "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+    },
+    {
+      "label": "Indice Michigan (confiance)",
+      "value": "51.5",
+      "context": "Indice final Survey of Consumers, Université du Michigan, novembre 2026 (États‑Unis).",
+      "url": "https://isr.umich.edu/news-events/news-releases/sentiment-ticks-up-as-election-expected-to-usher-in-changes-to-economic-policy/"
+    },
+    {
+      "label": "Téléchargements mensuels approx. du package",
+      "value": "~190,000 monthly downloads",
+      "context": "Trafic estimé pour le package PyPI \"agent‑framework\" (pré‑compromise, estimation des analyses de sécurité publiées Nov 2026).",
+      "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
+    }
+  ],
+  "reading_room": [
+    {
+      "title": "Nvidia : pourquoi ces puces comptent",
+      "source": "The Atlantic (podcast)",
+      "why_read": "Entretien long et contextuel expliquant l’importance stratégique des accélérateurs GPU pour la concurrence US‑Chine et les risques géopolitiques liés au contrôle du silicium.",
+      "url": "https://www.theatlantic.com/podcasts/2026/11/whats-so-important-about-nvidias-chips/689521/?utm_source=openai"
+    },
+    {
+      "title": "Guerre Iran : l’embarras stratégique",
+      "source": "The Atlantic",
+      "why_read": "Article d’analyse sur l’impasse actuelle entre frappes, pressions diplomatiques et conséquences régionales — utile pour évaluer risques énergétiques et sécurité navale.",
+      "url": "https://www.theatlantic.com/national-security/2026/11/iran-war-slipped-into-dangerous-limbo/689471/"
+    },
+    {
+      "title": "Financial Stability Review, novembre 2026",
+      "source": "Banque centrale européenne (ECB)",
+      "why_read": "Rapport approfondi sur risques financiers liés à l’IA, valorisations tech et vulnérabilités systémiques — lecture clé pour macro‑risk managers.",
+      "url": "https://www.ecb.europa.eu/press/financial-stability-publications/fsr/pdf/ecb.fsr202611~e03b919d36.en.pdf"
+    },
+    {
+      "title": "Anthropic et le renversement des VC",
+      "source": "Financial Times",
+      "why_read": "Analyse des gagnants potentiels de l’IPO d’Anthropic et des conséquences pour la hiérarchie et la taille des gains en capital‑risque.",
+      "url": "https://www.ft.com/content/a3430f0d-0080-4970-8eec-2c14c8438b3d"
+    },
+    {
+      "title": "Pannes et risque systémique des serveurs",
+      "source": "The Atlantic",
+      "why_read": "Enquête narrative sur la récente série d’incidents technologiques et leurs implications pour résilience, redondance et dépendances critiques du numérique.",
+      "url": "https://www.theatlantic.com/ideas/2026/11/major-server-outage-response/689486/"
+    }
+  ],
+  "editorial": {
+    "title": "Note stratégique — quatre signaux à suivre",
+    "text": "Les événements récents tracent un fil rouge : dépendance accrue aux géants du calcul, fragilité des chaînes logicielles, vulnérabilité des infrastructures critiques et tensions géopolitiques sur les routes maritimes. Stratégie recommandée : (1) cartographier dépendances en compute et fournisseurs, (2) durcir supply‑chain et rotation des secrets, (3) stress‑tester plans de continuité, (4) préparer scénarios géopolitiques pour la sécurisation des approvisionnements énergétiques et des composants."
+  },
   "news": [
     {
-      "title": "TSMC et Samsung suspendent certaines livraisons vers la Chine",
-      "category": "SEMI·GÉOPOLITIQUE",
-      "url": "https://ca.investing.com/news/stock-market-news/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say-4969601"
+      "title": "Anthropic : IPO record et reflux du secteur IA",
+      "category": "marchés",
+      "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
     },
     {
-      "title": "Trump, Xi et Poutine : sommet trilatéral inédit à Shenzhen",
-      "category": "GÉOPOLITIQUE · DÉFENSE",
-      "url": "https://www.reutersconnect.com/item/wrap-up-trump-xi-putin-discuss-nuclear-risks-un-reform-energy-in-historic-trilateral-meeting/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XQU5BQ0FBVklERU8yMDI2MTExOTQzMTI3Njk2"
+      "title": "Compromission PyPI du package agent‑framework",
+      "category": "cybersécurité",
+      "url": "https://github.com/advisories/GHSA-764m-3ppc-5m73"
     },
     {
-      "title": "Commission européenne confirme une cyberattaque assistée par IA",
-      "category": "CYBER · IA",
-      "url": "https://apnews.com/article/79705095e8141cd650196dbff1cf3c70"
+      "title": "Pannes majeures : Microsoft, FAA et perturbations",
+      "category": "infrastructure & cybersécurité",
+      "url": "https://apnews.com/article/0c0f0cf4983a0f81ba88c4c4d2b8383f"
     }
   ],
   "readings": [
     {
-      "title": "Computer Chips Are the Most Magnificent",
-      "source": "THE NEW YORKER",
-      "url": "https://www.newyorker.com/magazine/2026/10/26/computer-chips-are-the-most-magnificent-things-weve-ever-made"
+      "title": "Nvidia : pourquoi ces puces comptent",
+      "source": "The Atlantic (podcast)",
+      "url": "https://www.theatlantic.com/podcasts/2026/11/whats-so-important-about-nvidias-chips/689521/?utm_source=openai"
     },
     {
-      "title": "We're putting too much faith in AI's ability",
-      "source": "MIT TECHNOLOGY REVIEW",
-      "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/"
+      "title": "Guerre Iran : l’embarras stratégique",
+      "source": "The Atlantic",
+      "url": "https://www.theatlantic.com/national-security/2026/11/iran-war-slipped-into-dangerous-limbo/689471/"
     }
   ],
   "date": "2026-11-21",
