@@ -1,4 +1,3 @@
-
 import json
 import os
 import re
@@ -8,244 +7,105 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 from openai import OpenAI
 
-TODAY = datetime.now(
-    ZoneInfo("Europe/Paris")
-).date().isoformat()
+TODAY = datetime.now(ZoneInfo('Europe/Paris')).date().isoformat()
+OUT = Path('docs/signal.json')
 
-OUTPUT = Path("docs/signal.json")
+prompt = f'''Tu es la rédaction de THE SIGNAL, veille quotidienne exécutive en français.
+Date de référence {TODAY} (heure de Paris). Effectue une recherche web réelle et récente.
+Concentre-toi sur technologie, IA, startups, capital, économie, géopolitique,
+cybersécurité, intelligence, défense, industrie et chaînes d'approvisionnement.
+Sources primaires et médias sérieux (Reuters, AP, FT, WSJ, The New Yorker,
+Rest of World, sources officielles) ; donne pour chaque élément une URL HTTPS
+qui soutient EXACTEMENT le fait annoncé. N'invente jamais de noms, chiffres,
+sommets, IPO, acquisitions ou publications. Distingue négociations, projets,
+accusations et faits avérés. Actualités dans les 72 dernières heures si
+possible, jusqu'à 7 jours si nécessaire. Pour les lectures : 90 derniers jours.
+Évite tout doublon entre rubriques. Sois précis, sobre et analytique.
 
-client = OpenAI(
-    api_key=os.environ["OPENAI_API_KEY"],
-    timeout=240.0,
-    max_retries=0
-)
+Génère UNIQUEMENT un objet JSON valide, sans Markdown, avec ces champs :
+- critical : exactement 5 objets {{title, category, summary, url}} ;
+  summary = 45-75 mots, faits et pourquoi cela compte ;
+  les TROIS premiers title doivent faire 54 caractères maximum ;
+- radar : exactement 8 objets {{title, category, summary, url}} ;
+  summary = 20-35 mots ;
+- intelligence : exactement 2 objets {{title, category, summary, url}} ;
+  summary = 40-65 mots ;
+- data_points : exactement 4 objets {{label, value, context, url}} ;
+  value chiffrée, context explique périmètre et signification ;
+- reading_room : exactement 5 objets {{title, source, why_read, url}} ;
+  deux premiers title de 48 caractères maximum, lectures de fond variées,
+  why_read de 20-40 mots ;
+- editorial : objet {{title, text}} ; text = réflexion originale 60-90 mots.
+Les URLs doivent mener à des pages d'articles ou documents, pas à des accueils.
+Les 3 critical du widget couvrent au moins deux domaines différents.
+N'utilise jamais les points de suspension dans les 3 premiers titres
+ni les 2 premières lectures. En cas d'incertitude, choisis un autre sujet.
+'''
 
-# Dernière édition pour éviter les répétitions
-previous = {}
-if OUTPUT.exists():
-    try:
-        previous = json.loads(
-            OUTPUT.read_text(encoding="utf-8")
-        )
-    except (ValueError, OSError):
-        pass
-
-previous_titles = [
-    x.get("title", "")
-    for group in ("news", "readings")
-    for x in previous.get(group, [])
-]
-
-prompt = f"""
-Tu es le rédacteur en chef de THE SIGNAL,
-Executive Intelligence Brief.
-
-DATE : {TODAY}
-LECTRICE : journaliste et consultante Tech,
-spécialiste de l'économie, de l'industrie,
-de l'innovation et des rapports de puissance.
-
-OBJECTIF :
-Sélectionner 3 actualités récentes et 2 lectures
-exceptionnelles pour un widget iPhone.
-
-Réalise une recherche web. Privilégie les
-développements publiés ou confirmés dans les
-48 dernières heures.
-
-DOMAINES :
-IA, industrie, semi-conducteurs, macroéconomie,
-startups, capital-risque, cyber, renseignement,
-espionnage, défense, géopolitique, deeptech.
-
-SÉLECTION :
-- Exactement 3 actualités importantes et distinctes.
-- Au moins 2 grands domaines représentés.
-- Aucun sujet répété entre les 3 actualités.
-- Chaque actualité doit expliquer un fait nouveau.
-- Évite les spéculations et les annonces secondaires.
-- Préfère les faits chiffrés et documentés.
-
-SOURCES :
-Privilégie Reuters, FT, WSJ, médias français,
-documents officiels, entreprises, régulateurs,
-agences de renseignement et presse spécialisée.
-
-N'invente aucun événement, chiffre ou article.
-Ne présente jamais une accusation comme un fait.
-Une source doit étayer précisément le titre.
-Les événements extraordinaires exigent une
-confirmation indépendante solide.
-Si une information n'est pas suffisamment
-étayée, sélectionne un autre sujet.
-
-TITRES :
-- Maximum 65 caractères pour chaque actualité.
-- Maximum 48 caractères pour chaque lecture.
-- Courts mais précis, en français pour les news.
-- Ne coupe pas les titres avec "...".
-- Pas de titres vagues ou sensationnalistes.
-- Catégories de 35 caractères maximum.
-
-READING ROOM :
-Sélectionne 2 vrais articles de fond :
-enquête, reportage, portrait ou analyse longue.
-Privilégie The New Yorker, FT, WSJ,
-Rest of World, MIT Technology Review,
-Foreign Affairs ou des médias spécialisés.
-Ils peuvent dater des 90 derniers jours.
-Varie les médias et les disciplines.
-Indique un titre abrégé fidèle à l'original.
-Les URLs doivent mener aux articles précis.
-
-ÉVITE AUTANT QUE POSSIBLE LES TITRES PRÉCÉDENTS :
-{json.dumps(previous_titles, ensure_ascii=False)}
-
-FORMAT :
-Renvoie UNIQUEMENT un objet JSON valide,
-sans commentaires ni Markdown.
-
-{{
-  "news": [
-    {{
-      "title": "Titre court",
-      "category": "INDUSTRIE · TECH",
-      "url": "https://source/article"
-    }}
-  ],
-  "readings": [
-    {{
-      "title": "Titre court fidèle",
-      "source": "THE NEW YORKER",
-      "url": "https://media/article"
-    }}
-  ]
-}}
-"""
-
+client = OpenAI(api_key=os.environ['OPENAI_API_KEY'], timeout=300.0, max_retries=1)
 response = client.responses.create(
-    model="gpt-5-mini",
-    tools=[{"type": "web_search"}],
-    tool_choice="required",
-    input=prompt
+    model='gpt-5-mini',
+    tools=[{'type': 'web_search'}],
+    tool_choice='required',
+    input=prompt,
 )
-
 raw = response.output_text.strip()
-
-# Retirer d'éventuelles balises Markdown
-if raw.startswith("```"):
-    raw = re.sub(
-        r"^```(?:json)?\s*|\s*```$",
-        "",
-        raw,
-        flags=re.IGNORECASE
-    ).strip()
-
+if raw.startswith('```'):
+    raw = re.sub(r'^```(?:json)?\s*|\s*```$', '', raw, flags=re.I).strip()
 data = json.loads(raw)
 
-# CONTRÔLES AVANT PUBLICATION
-
-if not isinstance(data, dict):
-    raise ValueError("Réponse JSON invalide")
-
-news = data.get("news")
-readings = data.get("readings")
-
-if not isinstance(news, list) or len(news) != 3:
-    raise ValueError("Il faut exactement 3 actualités")
-
-if not isinstance(readings, list) or len(readings) != 2:
-    raise ValueError("Il faut exactement 2 lectures")
-
-seen_urls = set()
-seen_titles = set()
-
-for group, items, limit in [
-    ("news", news, 65),
-    ("readings", readings, 48)
-]:
+def validate_section(name, n, fields):
+    items = data.get(name)
+    if not isinstance(items, list) or len(items) != n:
+        raise ValueError(f'{name}: attendu {n} éléments')
     for item in items:
         if not isinstance(item, dict):
-            raise ValueError("Entrée invalide")
+            raise ValueError(f'{name}: élément non objet')
+        for field in fields:
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                raise ValueError(f'{name}: champ manquant {field}')
+        parsed = urlparse(item['url'])
+        if parsed.scheme != 'https' or not parsed.netloc or parsed.path in ('', '/'):
+            raise ValueError(f'{name}: URL invalide {item["url"]}')
+    return items
 
-        title = item.get("title", "")
-        url = item.get("url", "")
+critical = validate_section('critical', 5, ['title','category','summary','url'])
+radar = validate_section('radar', 8, ['title','category','summary','url'])
+intel = validate_section('intelligence', 2, ['title','category','summary','url'])
+points = validate_section('data_points', 4, ['label','value','context','url'])
+readings = validate_section('reading_room', 5, ['title','source','why_read','url'])
+if not isinstance(data.get('editorial'), dict) or not all(
+    isinstance(data['editorial'].get(k), str) and data['editorial'][k].strip()
+    for k in ['title','text']
+):
+    raise ValueError('Editorial manquant')
 
-        if not isinstance(title, str) or not title.strip():
-            raise ValueError("Titre manquant")
+for section, limit in [(critical[:3], 54),(readings[:2], 48)]:
+    for item in section:
+        if len(item['title']) > limit or '…' in item['title'] or '...' in item['title']:
+            raise ValueError('Titre widget trop long : ' + item['title'])
 
-        if len(title) > limit:
-            raise ValueError(
-                f"Titre trop long ({len(title)} caractères)"
-            )
+seen = set()
+for item in critical + radar + intel + readings:
+    if item['url'] in seen:
+        raise ValueError('Lien dupliqué : ' + item['url'])
+    seen.add(item['url'])
 
-        if "..." in title or "…" in title:
-            raise ValueError("Titre tronqué")
+# Compatibilité avec le widget Scriptable actuel
+# (il n'utilise que ces deux listes, la date et l'édition).
+data['news'] = [
+    {'title': x['title'], 'category': x['category'], 'url': x['url']}
+    for x in critical[:3]
+]
+data['readings'] = [
+    {'title': x['title'], 'source': x['source'], 'url': x['url']}
+    for x in readings[:2]
+]
+data['date'] = TODAY
+data['edition'] = 'THE SIGNAL'
 
-        normalized = title.casefold().strip()
-        if normalized in seen_titles:
-            raise ValueError("Titre dupliqué")
-        seen_titles.add(normalized)
-
-        if not isinstance(url, str):
-            raise ValueError("URL invalide")
-
-        parsed = urlparse(url)
-
-        if (
-            parsed.scheme != "https"
-            or not parsed.netloc
-            or parsed.path in ("", "/")
-        ):
-            raise ValueError("Lien trop générique : " + url)
-
-        if url in seen_urls:
-            raise ValueError("URL dupliquée")
-        seen_urls.add(url)
-
-        field = "category" if group == "news" else "source"
-
-        if not isinstance(item.get(field), str):
-            raise ValueError("Catégorie ou média manquant")
-
-        if not item[field].strip():
-            raise ValueError("Catégorie ou média vide")
-
-        if group == "news" and len(item[field]) > 35:
-            raise ValueError("Catégorie trop longue")
-
-# Vérifier que les lectures ne sont pas
-# exactement celles de l'édition précédente.
-old_reading_urls = {
-    x.get("url")
-    for x in previous.get("readings", [])
-}
-
-if len(
-    {x["url"] for x in readings} & old_reading_urls
-) == 2:
-    raise ValueError(
-        "Les deux lectures répètent l'édition précédente"
-    )
-
-# Écriture uniquement après validation
-data["date"] = TODAY
-data["edition"] = "THE SIGNAL"
-
-OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-
-OUTPUT.write_text(
-    json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-    encoding="utf-8"
-)
-
-print("THE SIGNAL :", TODAY)
-print("Actualités :")
-for item in news:
-    print("-", item["title"])
-
-print("Reading Room :")
-for item in readings:
-    print("-", item["title"])
-
-print("Fichier généré avec succès.")
+OUT.parent.mkdir(parents=True, exist_ok=True)
+# En cas d'échec de validation, le dernier JSON reste intact.
+OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+print('THE SIGNAL publiée :', TODAY)
+print('5 développements / 8 Radar / 2 signaux / 4 chiffres / 5 lectures')
