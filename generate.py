@@ -1,4 +1,7 @@
 
+#!/usr/bin/env python3
+"""THE SIGNAL — veille complète + widget Scriptable."""
+
 import json
 import os
 import re
@@ -10,11 +13,6 @@ from zoneinfo import ZoneInfo
 from openai import OpenAI
 
 
-# ==========================================
-# THE SIGNAL — EXECUTIVE INTELLIGENCE BRIEF
-# Génération quotidienne de la veille
-# ==========================================
-
 TODAY = datetime.now(
     ZoneInfo("Europe/Paris")
 ).date().isoformat()
@@ -23,389 +21,445 @@ OUT = Path("docs/signal.json")
 
 
 # ==========================================
-# INSTRUCTIONS ÉDITORIALES
+# CONSIGNES DE GÉNÉRATION
 # ==========================================
 
-prompt = f"""
-Tu es la rédaction en chef de THE SIGNAL,
-une veille quotidienne exécutive en français.
+PROMPT = f"""
+Tu es la rédaction de THE SIGNAL,
+Executive Intelligence Brief en français.
 
-Date de référence : {TODAY}, heure de Paris.
+Date : {TODAY}, fuseau Europe/Paris.
 
-Effectue une recherche web réelle et récente.
+Effectue une recherche web réelle.
 
-DOMAINES :
-Technologie, intelligence artificielle, startups,
-capital-risque, économie, marchés, géopolitique,
-cybersécurité, renseignement, espionnage, défense,
-industrie, innovation et chaînes d'approvisionnement.
+Sujets : technologie, IA, startups/VC,
+macroéconomie, marchés, cybersécurité,
+renseignement, géopolitique, défense,
+industrie et chaînes d'approvisionnement.
 
-LIGNE ÉDITORIALE :
-- Sélectionner les faits stratégiques les plus importants.
-- Privilégier la précision, la pertinence et la diversité.
-- Identifier les rapports de force et les conséquences.
-- Éviter le sensationnalisme et les répétitions.
-- Donner la priorité aux faits nouveaux et documentés.
+Privilégie Reuters, AP, FT, WSJ,
+sources officielles, The New Yorker,
+Rest of World et médias spécialisés fiables.
 
-SOURCES :
-Reuters, AP, Financial Times, Wall Street Journal,
-The New Yorker, Rest of World, sources officielles,
-rapports institutionnels et presse spécialisée fiable.
+VÉRIFICATION :
+- Chaque URL HTTPS doit étayer le titre précis.
+- N'invente aucun événement, chiffre ou article.
+- Distingue faits, projets, négociations et accusations.
+- Actualités : 72 heures, jusqu'à 7 jours si nécessaire.
+- Lectures : articles de fond des 90 derniers jours.
+- Évite les doublons et varie les domaines.
+- Si les sources sont insuffisantes, produis moins
+  d'éléments plutôt que d'inventer.
+- Tous les champs doivent être remplis.
 
-Chaque URL doit soutenir précisément le fait annoncé.
+Renvoie UNIQUEMENT un objet JSON valide,
+sans commentaire ni balise Markdown.
 
-N'invente jamais de noms, de chiffres, de sommets,
-d'introductions en Bourse, d'acquisitions ou d'articles.
+STRUCTURE :
 
-Distingue systématiquement :
-- Les faits confirmés.
-- Les négociations en cours.
-- Les projets et annonces.
-- Les accusations non encore établies.
-- Les analyses et hypothèses.
+"critical" :
+Idéalement 5 objets, minimum 3.
+Champs obligatoires :
+{{"title":"...", "category":"...",
+  "summary":"...", "url":"https://..."}}
+Les 3 premiers titres : 54 caractères maximum.
+Résumé : 45 à 75 mots, avec pourquoi cela compte.
 
-PÉRIODE :
-Actualités des 72 dernières heures si possible,
-jusqu'à 7 jours pour les développements importants.
+"radar" :
+Idéalement 8 objets, entre 6 et 10 acceptés.
+Champs :
+{{"title":"...", "category":"...",
+  "summary":"...", "url":"https://..."}}
+Résumé : 20 à 35 mots.
 
-Reading Room : articles publiés dans les 90
-derniers jours, avec préférence pour les enquêtes
-et les grands reportages.
+"intelligence" :
+Idéalement 2 objets, entre 1 et 3 acceptés.
+Champs :
+{{"title":"...", "category":"...",
+  "summary":"...", "url":"https://..."}}
+Renseignement, défense, cyber ou industrie.
 
-STRUCTURE OBLIGATOIRE :
+"data_points" :
+Idéalement 4 objets, entre 3 et 6 acceptés.
 
-1. critical
-Exactement 5 objets :
-{{title, category, summary, url}}
+Chaque objet doit avoir ces quatre clés EXACTES :
+{{"label":"...", "value":"290 M€",
+  "context":"...", "url":"https://..."}}
 
-summary : 45 à 75 mots.
-Présenter les faits, les chiffres essentiels
-et expliquer pourquoi l'information compte.
+La valeur "value" doit être une CHAÎNE
+contenant un chiffre vérifiable.
+N'utilise pas figure, amount, metric ou number
+à la place de la clé "value".
+Le contexte précise la période et le périmètre.
 
-Les 3 premiers titres doivent contenir
-54 caractères maximum.
+"reading_room" :
+Idéalement 5 objets, minimum 2.
+Champs :
+{{"title":"...", "source":"...",
+  "why_read":"...", "url":"https://..."}}
+Les 2 premiers titres : 48 caractères maximum.
+Sélectionne enquêtes, reportages et analyses de fond.
 
-2. radar
-Exactement 8 objets :
-{{title, category, summary, url}}
-
-summary : 20 à 35 mots.
-Signaux brefs, précis et différents des
-5 développements principaux.
-
-3. intelligence
-Exactement 2 objets :
-{{title, category, summary, url}}
-
-summary : 40 à 65 mots.
-Renseignement, cyber, défense ou capacités
-industrielles sensibles.
-
-4. data_points
-Exactement 4 objets :
-{{label, value, context, url}}
-
-RÈGLE IMPÉRATIVE :
-Chaque objet data_points DOIT contenir
-ces quatre champs, tous remplis :
-
-- "label" : nom de l'indicateur.
-- "value" : valeur chiffrée sous forme de texte.
-- "context" : explication et périmètre du chiffre.
-- "url" : lien HTTPS vers la source.
-
-Exemple de structure :
-{{
-  "label": "Financement européen",
-  "value": "290 M€",
-  "context": "Montant des appels à projets annoncés.",
-  "url": "https://commission.europa.eu/..."
-}}
-
-Ne remplace JAMAIS "value" par :
-"figure", "number", "metric", "stat" ou "amount".
-
-Ne renvoie jamais un objet sans "value".
-Si une donnée est insuffisamment documentée,
-sélectionne un autre indicateur vérifiable.
-
-5. reading_room
-Exactement 5 objets :
-{{title, source, why_read, url}}
-
-Sélectionner des enquêtes, reportages,
-essais et analyses de fond.
-
-why_read : 20 à 40 mots.
-
-Les 2 premiers titres doivent contenir
-48 caractères maximum.
-
-Privilégier les lectures originales et les
-médias reconnus pour leurs enquêtes.
-
-6. editorial
+"editorial" :
 Un objet :
-{{title, text}}
+{{"title":"...", "text":"..."}}
+Réflexion stratégique originale de 60 à 90 mots.
 
-text : 60 à 90 mots.
-Une réflexion stratégique originale,
-fondée sur les informations de l'édition.
-Bien distinguer les analyses des faits.
+Évite les points de suspension dans les titres
+destinés au widget.
 
-RÈGLES FINALES :
-- Aucun doublon entre les rubriques.
-- URLs HTTPS vers les articles précis.
-- Pas de liens vers les pages d'accueil.
-- Les 3 premières actualités doivent couvrir
-  au moins 2 domaines différents.
-- Aucun point de suspension dans les titres
-  destinés au widget.
-- Ne pas inventer de faits pour remplir une rubrique.
-- Respecter rigoureusement les noms des champs JSON.
-- Vérifier les 4 objets data_points avant de répondre.
-- Retourner UNIQUEMENT un objet JSON valide.
-- Aucun commentaire, aucune balise Markdown.
+Vérifie les noms des champs avant de répondre.
 """
 
 
 # ==========================================
-# APPEL OPENAI
+# OUTILS DE VALIDATION
 # ==========================================
 
-client = OpenAI(
-    api_key=os.environ["OPENAI_API_KEY"],
-    timeout=300.0,
-    max_retries=1
-)
+def valid_url(value):
+    if not isinstance(value, str):
+        return False
 
-response = client.responses.create(
-    model="gpt-5-mini",
-    tools=[{"type": "web_search"}],
-    tool_choice="required",
-    input=prompt
-)
+    u = urlparse(value.strip())
 
-raw = response.output_text.strip()
-
-# Supprimer les éventuelles balises Markdown
-if raw.startswith("```"):
-    raw = re.sub(
-        r"^```(?:json)?\s*|\s*```$",
-        "",
-        raw,
-        flags=re.I
-    ).strip()
-
-data = json.loads(raw)
+    return (
+        u.scheme == "https"
+        and bool(u.netloc)
+        and u.path not in ("", "/")
+        and "example." not in u.netloc.lower()
+    )
 
 
-# ==========================================
-# VALIDATION DES RUBRIQUES
-# ==========================================
+def nonempty_text(value):
+    return (
+        isinstance(value, str)
+        and bool(value.strip())
+    )
 
-def validate_section(name, count, fields):
 
-    items = data.get(name)
+def compact_title(text, max_length):
+    """Produit un titre court sans points de suspension."""
 
-    if not isinstance(items, list) or len(items) != count:
+    text = " ".join(text.split())
+    text = text.replace("…", "").replace("...", "")
+
+    if len(text) <= max_length:
+        return text
+
+    short = text[:max_length + 1].rsplit(" ", 1)[0]
+    short = short.rstrip(" ,;:-")
+
+    return short if short else text[:max_length]
+
+
+def normalize_entries(
+    data,
+    name,
+    fields,
+    minimum,
+    maximum
+):
+    raw = data.get(name, [])
+
+    if not isinstance(raw, list):
         raise ValueError(
-            f"{name}: attendu {count} éléments"
+            f"{name}: liste JSON attendue"
         )
 
-    for index, item in enumerate(items):
+    cleaned = []
+    seen = set()
+
+    for i, item in enumerate(raw):
 
         if not isinstance(item, dict):
-            raise ValueError(
-                f"{name}[{index}]: élément non objet"
+            print(
+                f"AVERTISSEMENT : {name}[{i}] ignoré "
+                "(pas un objet)"
             )
+            continue
 
-        for field in fields:
+        item = dict(item)
 
-            value = item.get(field)
+        # Corrige certains noms de champs évidents,
+        # mais n'invente jamais de valeur.
 
-            if (
-                not isinstance(value, str)
-                or not value.strip()
+        if (
+            name == "data_points"
+            and not nonempty_text(item.get("value"))
+        ):
+            for alias in (
+                "figure",
+                "amount",
+                "number",
+                "stat"
             ):
-                raise ValueError(
-                    f"{name}[{index}]: champ manquant {field}"
-                )
+                candidate = item.get(alias)
 
-        parsed = urlparse(item["url"])
+                if (
+                    isinstance(candidate, (int, float))
+                    and not isinstance(candidate, bool)
+                ):
+                    item["value"] = str(candidate)
+                    break
+
+                if nonempty_text(candidate):
+                    item["value"] = candidate.strip()
+                    break
+
+        if not all(
+            nonempty_text(item.get(field))
+            for field in fields
+        ):
+            print(
+                f"AVERTISSEMENT : {name}[{i}] ignoré "
+                "(champ manquant)"
+            )
+            continue
+
+        if not valid_url(item["url"]):
+            print(
+                f"AVERTISSEMENT : {name}[{i}] ignoré "
+                "(URL invalide)"
+            )
+            continue
 
         if (
-            parsed.scheme != "https"
-            or not parsed.netloc
-            or parsed.path in ("", "/")
+            name == "data_points"
+            and not re.search(r"\d", item["value"])
         ):
-            raise ValueError(
-                f"{name}: URL invalide {item['url']}"
+            print(
+                f"AVERTISSEMENT : {name}[{i}] ignoré "
+                "(chiffre absent)"
             )
+            continue
 
-    return items
+        item = {
+            field: item[field].strip()
+            for field in fields
+        }
 
+        url = item["url"]
 
-critical = validate_section(
-    "critical",
-    5,
-    ["title", "category", "summary", "url"]
-)
-
-radar = validate_section(
-    "radar",
-    8,
-    ["title", "category", "summary", "url"]
-)
-
-intel = validate_section(
-    "intelligence",
-    2,
-    ["title", "category", "summary", "url"]
-)
-
-points = validate_section(
-    "data_points",
-    4,
-    ["label", "value", "context", "url"]
-)
-
-readings = validate_section(
-    "reading_room",
-    5,
-    ["title", "source", "why_read", "url"]
-)
-
-
-# ==========================================
-# VALIDATION DE L'ÉDITORIAL
-# ==========================================
-
-if (
-    not isinstance(data.get("editorial"), dict)
-    or not all(
-        isinstance(data["editorial"].get(k), str)
-        and data["editorial"][k].strip()
-        for k in ["title", "text"]
-    )
-):
-    raise ValueError("Editorial manquant")
-
-
-# ==========================================
-# CONTRÔLE DES TITRES DU WIDGET
-# ==========================================
-
-for section, limit in [
-    (critical[:3], 54),
-    (readings[:2], 48)
-]:
-    for item in section:
-
-        title = item["title"]
-
-        if (
-            len(title) > limit
-            or "…" in title
-            or "..." in title
-        ):
-            raise ValueError(
-                "Titre widget trop long : " + title
+        if url in seen:
+            print(
+                f"AVERTISSEMENT : {name}[{i}] ignoré "
+                "(URL répétée)"
             )
+            continue
 
+        seen.add(url)
+        cleaned.append(item)
 
-# ==========================================
-# CONTRÔLE DES DOUBLONS
-# ==========================================
-
-seen = set()
-
-for item in critical + radar + intel + readings:
-
-    url = item["url"]
-
-    if url in seen:
+    if len(cleaned) < minimum:
         raise ValueError(
-            "Lien dupliqué : " + url
+            f"{name}: seulement {len(cleaned)} "
+            f"éléments valides (minimum {minimum}). "
+            "Ancienne édition conservée."
         )
 
-    seen.add(url)
+    if len(cleaned) > maximum:
+        print(
+            f"INFO : {name} réduit "
+            f"de {len(cleaned)} à {maximum} éléments"
+        )
+        cleaned = cleaned[:maximum]
+
+    return cleaned
 
 
 # ==========================================
-# COMPATIBILITÉ AVEC SCRIPTABLE
+# CONSTRUCTION DE L'ÉDITION
 # ==========================================
 
-# Les trois premiers développements
-# alimentent le widget iPhone.
+def build_edition(data):
 
-data["news"] = [
-    {
-        "title": x["title"],
-        "category": x["category"],
-        "url": x["url"]
-    }
-    for x in critical[:3]
-]
+    if not isinstance(data, dict):
+        raise ValueError(
+            "Réponse JSON : objet attendu"
+        )
 
-# Les deux premières lectures
-# alimentent la Reading Room du widget.
-
-data["readings"] = [
-    {
-        "title": x["title"],
-        "source": x["source"],
-        "url": x["url"]
-    }
-    for x in readings[:2]
-]
-
-
-# ==========================================
-# DATE ET IDENTITÉ ÉDITORIALE
-# ==========================================
-
-data["date"] = TODAY
-data["edition"] = "THE SIGNAL"
-
-
-# ==========================================
-# PUBLICATION
-# ==========================================
-
-# Aucun fichier n'est remplacé si une
-# validation précédente a échoué.
-
-OUT.parent.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
-OUT.write_text(
-    json.dumps(
+    critical = normalize_entries(
         data,
-        ensure_ascii=False,
-        indent=2
-    ) + "\n",
-    encoding="utf-8"
-)
+        "critical",
+        ("title", "category", "summary", "url"),
+        3,
+        5
+    )
 
-print("THE SIGNAL publiée :", TODAY)
+    radar = normalize_entries(
+        data,
+        "radar",
+        ("title", "category", "summary", "url"),
+        6,
+        10
+    )
 
-print(
-    "5 développements / "
-    "8 Radar / "
-    "2 signaux / "
-    "4 chiffres / "
-    "5 lectures"
-)
+    intelligence = normalize_entries(
+        data,
+        "intelligence",
+        ("title", "category", "summary", "url"),
+        1,
+        3
+    )
 
-print("Titres du widget :")
+    data_points = normalize_entries(
+        data,
+        "data_points",
+        ("label", "value", "context", "url"),
+        3,
+        6
+    )
 
-for item in data["news"]:
-    print("-", item["title"])
+    reading_room = normalize_entries(
+        data,
+        "reading_room",
+        ("title", "source", "why_read", "url"),
+        2,
+        5
+    )
 
-print("Reading Room :")
+    editorial = data.get("editorial")
 
-for item in data["readings"]:
-    print("-", item["title"])
+    if (
+        not isinstance(editorial, dict)
+        or not all(
+            nonempty_text(editorial.get(field))
+            for field in ("title", "text")
+        )
+    ):
+        raise ValueError(
+            "editorial: titre ou texte manquant"
+        )
+
+    # Sélection courte pour le widget iPhone
+
+    news = [
+        {
+            "title": compact_title(
+                item["title"], 54
+            ),
+            "category": item["category"],
+            "url": item["url"]
+        }
+        for item in critical[:3]
+    ]
+
+    readings = [
+        {
+            "title": compact_title(
+                item["title"], 48
+            ),
+            "source": item["source"],
+            "url": item["url"]
+        }
+        for item in reading_room[:2]
+    ]
+
+    # Structure compatible avec le site et Scriptable
+
+    return {
+        "critical": critical,
+        "radar": radar,
+        "intelligence": intelligence,
+        "data_points": data_points,
+        "reading_room": reading_room,
+        "editorial": {
+            "title": editorial["title"].strip(),
+            "text": editorial["text"].strip()
+        },
+        "news": news,
+        "readings": readings,
+        "date": TODAY,
+        "edition": "THE SIGNAL"
+    }
+
+
+# ==========================================
+# APPEL OPENAI ET PUBLICATION
+# ==========================================
+
+def main():
+
+    if not os.environ.get("OPENAI_API_KEY"):
+        raise RuntimeError(
+            "OPENAI_API_KEY absent des secrets GitHub"
+        )
+
+    client = OpenAI(
+        timeout=300.0,
+        max_retries=0
+    )
+
+    response = client.responses.create(
+        model="gpt-5-mini",
+        tools=[{"type": "web_search"}],
+        tool_choice="required",
+        input=PROMPT
+    )
+
+    raw = response.output_text.strip()
+
+    if raw.startswith("```"):
+        raw = re.sub(
+            r"^```(?:json)?\s*|\s*```$",
+            "",
+            raw,
+            flags=re.IGNORECASE
+        ).strip()
+
+    try:
+        data = json.loads(raw)
+
+    except json.JSONDecodeError as exc:
+        raise ValueError(
+            "OpenAI n'a pas renvoyé un JSON "
+            "complet et valide"
+        ) from exc
+
+    edition = build_edition(data)
+
+    # Publication uniquement après validation
+
+    OUT.parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    tmp = OUT.with_suffix(".json.tmp")
+
+    tmp.write_text(
+        json.dumps(
+            edition,
+            ensure_ascii=False,
+            indent=2
+        ) + "\n",
+        encoding="utf-8"
+    )
+
+    # Remplacement atomique du fichier
+    tmp.replace(OUT)
+
+    print(
+        "THE SIGNAL : édition générée le",
+        TODAY
+    )
+
+    for key in (
+        "critical",
+        "radar",
+        "intelligence",
+        "data_points",
+        "reading_room"
+    ):
+        print(
+            f"{key}: {len(edition[key])} éléments"
+        )
+
+    print("Widget :")
+
+    for item in edition["news"]:
+        print("-", item["title"])
+
+
+if __name__ == "__main__":
+    main()
