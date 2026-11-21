@@ -1,31 +1,31 @@
 {
   "news": [
     {
-      "title": "BIS : limites à l’accès distant des puces avancées",
-      "category": "INDUSTRIE · RÉGULATION",
-      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors"
+      "title": "TSMC et Samsung suspendent certaines livraisons vers la Chine",
+      "category": "SEMI·GÉOPOLITIQUE",
+      "url": "https://ca.investing.com/news/stock-market-news/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say-4969601"
     },
     {
-      "title": "Commission européenne : cyberattaque assistée par IA",
-      "category": "CYBER · SÉCURITÉ",
-      "url": "https://in.marketscreener.com/news/eu-commission-targeted-in-cyberattack-politico-reports-ce785eddd08bf727"
+      "title": "Trump, Xi et Poutine : sommet trilatéral inédit à Shenzhen",
+      "category": "GÉOPOLITIQUE · DÉFENSE",
+      "url": "https://www.reutersconnect.com/item/wrap-up-trump-xi-putin-discuss-nuclear-risks-un-reform-energy-in-historic-trilateral-meeting/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XQU5BQ0FBVklERU8yMDI2MTExOTQzMTI3Njk2"
     },
     {
-      "title": "Anthropic : IPO $81,3 G, valorisation trillionnaire",
-      "category": "IA · MARCHÉS",
-      "url": "https://www.investing.com/news/stock-market-news/anthropics-blockbuster-debut-tests-wall-streets-faith-in-ai-boom-5041688"
+      "title": "Commission européenne confirme une cyberattaque assistée par IA",
+      "category": "CYBER · IA",
+      "url": "https://apnews.com/article/79705095e8141cd650196dbff1cf3c70"
     }
   ],
   "readings": [
     {
-      "title": "A New Kind of Foreign Agent",
-      "source": "FOREIGN AFFAIRS",
-      "url": "https://www.foreignaffairs.com/articles/united-states/2026-11-11/new-kind-foreign-agent"
+      "title": "Computer Chips Are the Most Magnificent",
+      "source": "THE NEW YORKER",
+      "url": "https://www.newyorker.com/magazine/2026/10/26/computer-chips-are-the-most-magnificent-things-weve-ever-made"
     },
     {
-      "title": "ARTEX and AI-Powered Red Teaming Tools",
-      "source": "PALO ALTO NETWORKS - UNIT42",
-      "url": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/"
+      "title": "We're putting too much faith in AI's ability",
+      "source": "MIT TECHNOLOGY REVIEW",
+      "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/"
     }
   ],
   "date": "2026-11-21",
