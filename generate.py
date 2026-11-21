@@ -24,12 +24,24 @@ Date de l'édition : {TODAY}, fuseau Europe/Paris.
 Effectue une recherche web réelle. Sélectionne uniquement des informations
 récentes et vérifiables. Sujets : technologie, IA, startups/VC, macro/marchés,
 cybersécurité, renseignement, géopolitique, défense, industrie et supply chain.
-Privilégie Reuters, AP, FT, WSJ, sources officielles, The New Yorker,
-Rest of World et médias spécialisés réputés.
+SOURCES POUR ACTUALITÉS : Reuters, AP, FT, WSJ, sources officielles,
+Rest of World et médias spécialisés fiables. Explore aussi OpexNews
+(opexnews.fr) pour défense, BITD, équipements, commandes et souveraineté,
+et Intelligence Online (intelligenceonline.fr / intelligenceonline.com)
+pour renseignement, réseaux d'influence, diplomatie secrète et cyber.
+Ce sont des sources à consulter en priorité pour leurs SPÉCIALITÉS,
+jamais des rubriques à remplir ni une preuve automatique de véracité.
+Vérifie date, titre, contenu et attribution de chaque article.
+Ne confonds jamais la publication d'une information et sa confirmation
+indépendante : une révélation exclusive se rapporte à son média.
 
 RÈGLES DE VÉRIFICATION :
 - Chaque URL HTTPS doit mener à un article/document précis étayant le titre.
 - N'invente aucun fait, chiffre, sommet, introduction en Bourse ou URL.
+- Pour IPO, résultats financiers, acquisitions, cyberattaques et espionnage,
+  fais preuve d'une prudence renforcée ; attribution et chiffres seulement
+  s'ils sont directement documentés par la source, sinon écarte le sujet.
+- Ne transforme jamais un conditionnel journalistique en fait avéré.
 - Distingue fait avéré, projet, négociation, accusation et hypothèse.
 - Actualités : idéalement 72 h, jusqu'à 7 jours si nécessaire.
 - Lectures : enquêtes et grands formats de moins de 90 jours.
@@ -82,23 +94,50 @@ EXACTES et obligatoires, toutes de type chaîne :
 {{"label":"...", "value":"290 M€", "context":"...",
   "comparison":"...", "stakes":"...", "url":"https://..."}}.
 - label : intitulé qui dit précisément QUOI, QUI et QUAND.
-- value : chiffre avec unité, période et périmètre explicites dans label/context.
+- value : UNE métrique courte, de 1 à 20 caractères au maximum,
+  exemple « +12 % », « 4,5 Md€ », « 81 jours » ; jamais une phrase.
+  Ne mets dans value ni le nom de l'entreprise ni les explications : elles
+  vont exclusivement dans label et context. Période et périmètre dans
+  label/context. Choisis le meilleur indicateur si une source en donne 3.
 - context : mesure, période, population ou périmètre, en 15-30 mots.
 - comparison : comparaison CHIFFRÉE et VÉRIFIABLE avec T-1, N-1,
   consensus, concurrent, objectif ou référence historique ; fournir valeur,
   base et période, en 20-45 mots. Une simple phrase vague est interdite.
-- stakes : ce que cet écart change pour l'économie, l'industrie, les marchés
-  ou les rapports de force, en 20-45 mots ; nuancer les conclusions.
+- stakes : pourquoi l'écart compte, ce qu'il révèle de stratégique,
+  en 20-35 mots maximum. Évite les banalités et les spéculations.
+- Les 2 à 4 data points doivent couvrir des domaines différents si possible.
+  Ne répète pas un même sujet, entreprise ou opération dans 2 cartes.
 - url : source HTTPS permettant de vérifier la valeur ET la comparaison.
 N'invente jamais de comparaison ou de consensus. Si aucune comparaison
 solide n'est trouvée, choisis une AUTRE donnée. Évite les chiffres isolés,
 les unités ambiguës et les comparaisons de périmètres incompatibles.
 Le nombre de 4 est une cible, la qualité prime sur la quantité.
 
-"reading_room" : 1 à 5 lectures de grande qualité avec
+"reading_room" : 1 à 4 lectures d'exception avec
 {{"title":"...", "source":"...", "why_read":"...", "url":"https://..."}}.
 Les 2 PREMIERS titres font 48 caractères maximum, sans points de suspension.
-Pourquoi lire : 20 à 40 mots, enquête ou analyse approfondie authentique.
+Avant de chercher ailleurs, explore ACTIVEMENT et séparément les articles
+récents de ces rédactions, sans quota ni obligation de les retenir :
+1. The New Yorker : grands reportages, portraits et enquêtes au long cours.
+2. The Wall Street Journal : enquêtes originales, affaires, industrie.
+3. 404 Media (404media.co) : surveillance, hacking, plateformes, données.
+4. Financial Times : enquêtes, Big Reads, finance et chaînes industrielles.
+5. Intelligence Online : enquêtes sur renseignement et réseaux de pouvoir.
+6. OpexNews : entretiens ou reportages originaux défense/industrie.
+Recherche chaque source explicitement ; compare ensuite les articles candidats.
+Élargis seulement si des publications tierces offrent de meilleurs formats
+(Rest of World, ProPublica, Bloomberg, MIT Tech Review, Wired, etc.).
+AUCUN quota par média : ne retiens que les meilleures lectures, 1 à 4.
+Préférence 30 derniers jours, jusqu'à 90 jours pour un article remarquable.
+PRIORITÉ ABSOLUE aux enquêtes, grands reportages et portraits approfondis.
+Exclus les simples brèves, reprises d'agences, pages d'accueil, billets
+promotionnels, billets d'annonce, synthèses superficielles et rapports
+techniques (ceux-ci vont plutôt dans Intelligence & Industrial Signals).
+Diversifie les thèmes : pas 3 articles sur la même opération ou la même IA.
+Pourquoi lire : 35-50 mots, avec ce que l'enquête révèle concrètement,
+ce qui la rend originale et l'intérêt pour nos lecteurs.
+Respecte titre, média, date et URL de l'article précis ; n'invente rien.
+N'ajoute jamais un média prioritaire si son article n'est pas remarquable.
 
 "editorial" : un objet
 {{"title":"...", "text":"..."}}.
@@ -163,9 +202,16 @@ def normalize_entries(data, name, fields, minimum, maximum):
         if not valid_url(item["url"]):
             print(f"AVERTISSEMENT : {name}[{i}] ignoré (URL invalide)")
             continue
-        if name == "data_points" and not re.search(r"\d", item["value"]):
-            print(f"AVERTISSEMENT : {name}[{i}] ignoré (chiffre absent)")
-            continue
+        if name == "data_points":
+            # Un « chiffre » ne doit plus être une phrase immense.
+            metric = " ".join(str(item["value"]).split())
+            if len(metric) > 22 or not re.search(r"\d", metric):
+                print(f"AVERTISSEMENT : {name}[{i}] ignoré (valeur trop longue ou non chiffrée)")
+                continue
+            item["value"] = metric
+            if not re.search(r"\d", item["comparison"]):
+                print(f"AVERTISSEMENT : {name}[{i}] ignoré (comparaison non chiffrée)")
+                continue
 
         item = {field: item[field].strip() for field in fields}
         url = item["url"]
@@ -203,7 +249,7 @@ def build_edition(data):
         data, "data_points", ("label", "value", "context", "comparison", "stakes", "url"), 1, 4
     )
     reading_room = normalize_entries(
-        data, "reading_room", ("title", "source", "why_read", "url"), 1, 5
+        data, "reading_room", ("title", "source", "why_read", "url"), 1, 4
     )
 
     editorial = data.get("editorial")
