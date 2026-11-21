@@ -1,121 +1,129 @@
 {
   "critical": [
     {
-      "title": "La Commission européenne visée par une cyberattaque AI",
-      "category": "cybersécurité",
-      "summary": "Le 19 novembre 2026 la Commission européenne a confirmé qu'une « campagne cyber » détectée le 22 octobre avait utilisé des outils d'IA pour cibler des applications internes (Sysper, MyPMO et services de traduction). L'annonce suit des alertes de CERT‑EU et du FBI sur l'outil open‑source ARTEX. Conséquence : institutions publiques et fournisseurs doivent réviser contrôles d'accès, segmentation et plans de continuité face à attaques automatisées plus rapides.",
-      "url": "https://audiovisual.ec.europa.eu/en/media/video/I-298222"
+      "title": "Anthropic : IPO record à 81,3 Md$",
+      "category": "technologie / marchés",
+      "summary": "Anthropic (Claude) est entré en Bourse les 18–19 nov. 2026, levant environ 81,3 milliards $ et atteignant une valorisation d'environ 1,5–1,8 T$ à l'ouverture. C’est l’offre la plus importante jamais réalisée ; elle cristallise la concentration du capital dans quelques labos d’IA et augmente la probabilité d’une reconfiguration rapide des financements et des indices actions. Pourquoi ça compte : impact immédiat sur l’appétit pour le risque et sur la politique de financement des hyperscalers.",
+      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
     },
     {
-      "title": "Anthropic : IPO record, débâcle boursière",
-      "category": "marchés / IA",
-      "summary": "Anthropic a réalisé l’IPO la plus importante (prix d'offre $83, 980 M d'actions) et a levé ~81,3 milliards $ ; son cours a ouvert à $111,50 (≈+34%) puis retombé, perdant la majeure partie du gain les deux jours suivants. L’événement (19–20 nov. 2026) devait rassurer le marché IA : au contraire, il a accéléré la revalorisation du risque sectoriel et précipité une forte rotation hors des valeurs AI.",
-      "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+      "title": "Nvidia : démission de Jensen Huang",
+      "category": "IA / industrie",
+      "summary": "Le fondateur‑CEO de Nvidia, Jensen Huang, a démissionné (annonce publique du 12 nov. 2026). Le conseil a formé une gouvernance de transition et a déclaré qu’il n’envisage pas de réintégration. L’affaire, liée à des liaisons personnelles et à une enquête sur des ventes détournées de puces, a précipité un fort éclatement de valorisation du secteur et relance le débat sur gouvernance, contrôle des exportations et dépendance de l’écosystème IA à un fournisseur unique.",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition?ftag=YHF4eb9d17"
     },
     {
-      "title": "SEC enquête sur la comptabilité de Nvidia",
-      "category": "marchés / semi‑conducteurs",
-      "summary": "Selon un reportage Reuters relayé le 20 novembre 2026, les services d'enquête de la SEC examinent des pratiques comptables potentielles chez Nvidia ; l'information, citant deux sources, a déclenché une chute de l'action (~‑11–14% selon les plages). Cette focalisation réglementaire ajoute un risque légal et de réputation à une entreprise pivot de la chaîne IA, avec des conséquences possibles sur financement, exportations de puces et confiance des clients hyperscaler.",
-      "url": "https://www.streetinsider.com/Reuters/Exclusive-US%2BSECs%2BNvidia%2Bprobe%2Bis%2Bexamining%2Bpotential%2Baccounting-issues%2C%2Bsources%2Bsay/27381042.html"
+      "title": "US : règle fermant la faille d'accès distant",
+      "category": "géopolitique / sécurité industrielle",
+      "summary": "Le 16 nov. 2026, le Département du Commerce américain (BIS) a publié une règle provisoire restreignant l’accès distant (« remote access ») aux puces et serveurs d’IA, visant à empêcher des sociétés chinoises d’utiliser des centres de calcul tiers pour contourner les contrôles. Contexte : la mesure suit les enquêtes sur des détournements via des partenaires en Asie du Sud‑Est. Signal : accélération de l’autonomie des chaînes d’approvisionnement et pression sur fournisseurs/cloud tiers non-américains.",
+      "url": "https://www.washingtonpost.com/technology/2026/11/16/trump-officials-issue-rule-restrict-sales-ai-chips-china/"
     },
     {
-      "title": "Palo Alto achète Applied Compute 4,5 Md$",
-      "category": "cybersécurité / IA",
-      "summary": "Palo Alto Networks a annoncé le 18 novembre 2026 l'acquisition d'Applied Compute pour 4,5 milliards $ en actions, visant à intégrer une plateforme d'entraînement/exécution de modèles open‑weight. L'opération combine cybersécurité et capacité d'infrastructure IA et intervient alors qu'Applied Compute revendiquait un run‑rate >100 M$ et une levée récente de 350 M$ (valorisation ≈3,25 Md$). Signal : accélération des consolidations entre sécurité et services d'infrastructure IA.",
-      "url": "https://paloaltonetworks.gcs-web.com/static-files/ba371128-3ec5-4f39-be80-d2ec1fc99254"
+      "title": "France : 50 000 obus commandés à KNDS",
+      "category": "défense / chaîne industrielle",
+      "summary": "La DGA a notifié le 12 nov. 2026 une double commande à KNDS Ammo France : montée en capacité du site de La Chapelle‑Saint‑Ursin (de 60 000 à 150 000 obus/an d’ici 2029) et commande de 50 000 obus livrables 2029–2030. Pourquoi c’est structurant : réponse concrète à la souveraineté munitions, visibilité industrielle pour la BITD française et signal aux partenaires européens d’une priorisation des capacités de gros calibres.",
+      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
     }
   ],
   "radar": [
     {
-      "title": "Hickenlooper propose un comité sénatorial IA",
-      "category": "régulation / IA",
-      "summary": "Fait (20 nov. 2026) : le sénateur John Hickenlooper a proposé la création d’un comité sénatorial ad hoc sur l’IA, demandant aux candidats à la direction de la majorité démocrate un « plan day‑one ». Contexte : les démocrates préparent une agenda législatif en janvier et cherchent à centraliser la régulation après des mois d’alertes sécuritaires et de débats sur la surveillance des data centers. Signal : accélération probable des initiatives législatives touchant données, sécurité des centres de calcul et exigences d’évaluation tierce pour modèles.",
-      "url": "https://apnews.com/article/047d0ab21237984701decd9ed5ced403"
+      "title": "Resserrement brutal du 'trade' IA",
+      "category": "marchés / VC",
+      "summary": "Fait (20 nov. 2026) : après la large IPO d’Anthropic et la tourmente autour de Nvidia, les indices technologiques ont subi une baisse marquée (S&P et Nasdaq en forte baisse). Contexte : valorisations élevées, inquiétudes sur coûts d’infrastructure et risque régulatoire. Le signal : les sorties de marché (IPO massif) ne suffisent plus à soutenir la prime IA ; à surveiller — repli des valorisations, ralentissement des nouvelles émissions et raréfaction du capital-risque pour rounds à forts besoins d’IA.",
+      "url": "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad"
     },
     {
-      "title": "Oracle confirme financement complet du contrat OpenAI",
-      "category": "infrastructure / supply chain",
-      "summary": "Fait (20 nov. 2026) : Oracle a indiqué que son contrat d'infrastructure avec OpenAI est intégralement financé après sa dernière levée de capitaux, précisant la progression des campus d'Abilene et Shackelford et la disponibilité des racks Vera Rubin. Contexte : inquiétudes publiques sur le coût des giga‑campus IA et sur la capacité des hyperscalers à financer l'expansion. Signal : la confirmation réduit un point d'incertitude sur la chaîne d'approvisionnement compute, mais souligne aussi l'ampleur des engagements financiers et le risque de crédit/contrats à long terme pour fournisseurs et prêteurs.",
-      "url": "https://www.investing.com/news/stock-market-news/oracle-says-openai-infrastructure-deal-is-fully-funded-after-final-capital-raise-5042771"
+      "title": "Tension inter‑agences sur les exportations de puces",
+      "category": "renseignement / politique industrielle",
+      "summary": "Fait (20 nov. 2026) : le Trésor américain a déclaré qu’aucune restriction supplémentaire n’était nécessaire sur la vente d’anciens modèles de puces Nvidia vers la Chine, alors que le Commerce a durci les règles d’accès distant la semaine précédente. Contexte : divergence publique entre agences sur la stratégie export. Le signal : instabilité politique pouvant produire des règles changeantes à court terme — risque opérationnel pour fournisseurs et hyperscalers, opportunité pour relocalisation et pour acteurs non‑américains.",
+      "url": "https://apnews.com/article/88142455395552afe74caec3399a648b"
     }
   ],
   "intelligence": [
     {
-      "title": "FBI / IC3 : ARTEX utilisé dans des campagnes réelles",
-      "category": "renseignement / cyber",
-      "summary": "Document (avis IC3 daté de novembre 2026) : depuis au moins août 2026, divers acteurs malveillants ont utilisé ARTEX, un cadre open‑source d'agent IA, pour automatiser intrusions et escalades (chemin vers privilèges en heures). Contexte : signal corroboré par CERT‑EU, Wiz et Microsoft ; plusieurs incidents supply‑chain et visées sur fournisseurs IT ont été attribués à ARTEX‑assisted campaigns. Signal : l’automatisation agentique réduit les fenêtres de détection et demande priorisation des protections d’identité et des clés API.",
-      "url": "https://www.ic3.gov/CSA/2026/261113.pdf?trk=article-ssr-frontend-pulse_little-text-block"
+      "title": "Paris accuse l'IRGC du piratage des frigos",
+      "category": "cybersécurité / renseignement",
+      "summary": "Le 9 nov. 2026 le gouvernement français a attribué aux Gardiens de la révolution islamique (IRGC) une vaste attaque ayant perturbé les systèmes de réfrigération de supermarchés en octobre. Contexte : incidents multi‑pays et présumée action du groupe ‘Shahid Kaveh’. Le signal : attribution publique d’un État‑acteur sur un sabotage industriel — implications pour sanctions européennes, posture cyberdéfensive et protection d’infrastructures OT critiques.",
+      "url": "https://www.reuters.com/article/idUSKBN2X70XX"
     }
   ],
   "data_points": [
     {
-      "label": "Anthropic — IPO et premier cours (19 Nov 2026)",
-      "value": "Offre 980 M d'actions à $83 (≈81,3 Md$ levés); premier échange $111,50 (+34,3% vs prix IPO).",
-      "context": "Valeurs tirées du compte‑rendu de l'introduction en Bourse (début des échanges Nasdaq, 19 nov. 2026) : nombre d'actions, prix d'offre, premier trade public.",
-      "comparison": "Première cotation $111,50 vs prix d'offre $83 => +34,3% premium à l'ouverture ; clôture jour 1 ≈ $97,17 (+17,1% vs IPO). (Sources : AP, cotations Nasdaq 19–20 nov. 2026).",
-      "stakes": "La forte volatilité jour‑1—jour‑2 illustre le risque de liquidité et la sensibilité du récit IA : levées massives peuvent transformer la structure de capital des VC tout en créant instabilité pour indices et fournisseurs de datacenters.",
-      "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+      "label": "Anthropic IPO, 19 Nov 2026 (levée)",
+      "value": "81,3 Md$",
+      "context": "Montant levé lors de l'introduction en Bourse (prix d'émission $83, 19 nov. 2026).",
+      "comparison": "Record précédent : SpaceX ~75 Md$ (introduction juin 2026). Source : AP/FT (nov. 2026).",
+      "stakes": "Renforce la concentration des capitaux sur quelques acteurs IA et élève les enjeux de stabilité financière et de gouvernance pour l’écosystème.",
+      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
     },
     {
-      "label": "Palo Alto Networks — prix d'acquisition Applied Compute (18 Nov 2026)",
-      "value": "Transaction annoncée : 4,5 Md$ (paiement en actions) ; Applied Compute avait levé 350 M$ à une valorisation ≈3,25 Md$ début novembre 2026.",
-      "context": "Annonce officielle de Palo Alto (18 nov. 2026) et synthèses de bases de données de financement privées indiquant la levée récente d'Applied Compute et son run‑rate revendiqué (>100 M$ ARR).",
-      "comparison": "Prix d'acquisition 4,5 Md$ vs valorisation privée ~3,25 Md$ (round ≈2 nov. 2026) => prime implicite ≈ +38% par rapport au dernier tour rapporté.",
-      "stakes": "Consolidation majeure : les sociétés de sécurité intègrent l'infrastructure d'entraînement/exécution de modèles, compressant la chaîne de valeur IA et créant un précédent de valorisations élevées pour startups d'infra IA.",
-      "url": "https://dealroom.co/charts/palo-alto-networks-buys-applied-compute?preview=1&theme=light"
+      "label": "Capacité obus 155 mm (France, cible 2029)",
+      "value": "150 000/an",
+      "context": "Objectif de production du site KNDS La Chapelle‑Saint‑Ursin fixé par la DGA pour 2029 (commande/plan notifié 12 nov. 2026).",
+      "comparison": "⇧ vs 60 000/an en 2025 (donnée DGA) — multiplication par 2,5 en quatre ans.",
+      "stakes": "Augmentation critique de souveraineté munitions pour la France et mesure de résilience BITD en haute intensité ; influence les capacités d’export et planning fournisseurs.",
+      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armes/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
+    },
+    {
+      "label": "S&P 500, séance 20 Nov 2026",
+      "value": "-3,7 %",
+      "context": "Baisse journalière du S&P 500 liée à une vente massive d’actions technologiques et IA (clôture 20 nov. 2026).",
+      "comparison": "Perte journalière vs clôture précédente : -3,7% (pire semaine depuis 18 mois pour l'indice selon AP).",
+      "stakes": "Confirme l’extrême sensibilité des indices au risque IA et la possibilité d’une correction plus large affectant financement et valorisations des startups IA.",
+      "url": "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad"
     }
   ],
   "reading_room": [
     {
-      "title": "Inside the $900bn data centre bet",
-      "source": "Financial Times",
-      "why_read": "Enquête sur les engagements de capacité et les mécanismes de financement derrière l’offre publique d’Anthropic ; essentiel pour comprendre le risque contra‑capex qui pèse sur modèles IA et fournisseurs d'infra.",
-      "url": "https://ft.trib.al/odaDueL"
+      "title": "The Global Economy Looks Vulnerable to an AI Bust",
+      "source": "Wall Street Journal",
+      "why_read": "Analyse approfondie des canaux par lesquels une correction des valeurs IA pourrait contaminer l’économie réelle : dépendance aux hyperscalers, exposition des marchés émergents, et scénarios de risque financier. Utile pour comprendre la macro‑fragilité née de la concentration du capital IA.",
+      "url": "https://stocks.apple.com/ApNQ8CDaxR8OSAIBEI4STjQ"
     },
     {
-      "title": "ARTEX in the Wild: Storm‑0940 report",
-      "source": "Wiz Research",
-      "why_read": "Rapport technique et journalisé (octobre 2026) détaillant l'usage d'ARTEX dans des intrusions contre fournisseurs IT et services d'identité — lecture opérationnelle pour équipes SOC et responsables cloud.",
-      "url": "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors"
+      "title": "Instead of Taking Your Job, A.I. Might Transform It",
+      "source": "The New Yorker",
+      "why_read": "Réflexion longue sur les effets micro‑économiques et sociaux de l’IA dans le travail quotidien : nuance les récits simplistes de destruction d’emplois et identifie leviers éducatifs et réglementaires pertinents pour décideurs publics et RH d’entreprise.",
+      "url": "https://www.newyorker.com/culture/open-questions/instead-of-taking-your-job-ai-might-transform-it"
     },
     {
-      "title": "The terrifying rise of AI hacking tools",
-      "source": "Axios",
-      "why_read": "Grand format récent qui synthétise la propagation d'outils agentiques (ARTEX, Cairn), les implications pour détection/assurance et les premières réponses institutionnelles (FBI, CERTs).",
-      "url": "https://www.axios.com/2026/11/18/ai-hacking-tools-artex-cairn"
+      "title": "La Malaisie s'offre 18 canons CAESAr",
+      "source": "OpexNews",
+      "why_read": "Reportage BITD qui illustre la dynamique commerciale de KNDS et la montée en puissance européenne des systèmes CAESAr en Indo‑Pacifique ; utile pour suivre exportations, localisation industrielle et effets sur chaînes d’approvisionnement munitions.",
+      "url": "https://opexnews.fr/malaisie-caesar-18-canons-knds-eurosatory-2026/"
     }
   ],
   "editorial": {
-    "title": "Tension entre innovation IA et résilience opérationnelle",
-    "text": "L’actualité de cette semaine montre un basculement : l’IA devient à la fois moteur de valeur (levées, IPO gigantesques) et multiplicateur de risque (outils agentiques qui automatisent les intrusions). Les décideurs d’entreprise et publics doivent désormais arbitrer deux priorités simultanées : financer massivement l’infrastructure compute tout en imposant contrôles techniques, audits tiers et règles contractuelles pour limiter l’exposition opérationnelle et financière sur dix ans."
+    "title": "Concentration, contrôle et résilience : le nouveau triptyque",
+    "text": "L’IPO d’Anthropic et la crise chez Nvidia révèlent une tension fondamentale : forte concentration des capacités de calcul, fragilité réglementaire et besoin urgent de résilience industrielle. Les politiques publiques vont devoir jouer sur trois leviers simultanés — régulation des marchés de capitaux IA, contrôle d’exportations ciblé et investissement public‑privé pour remonter la filière (semi‑conducteurs, data centers, BITD). Sans arbitrage clair, l’écosystème risque d’osciller entre bulle spéculative et frein stratégique."
   },
   "news": [
     {
-      "title": "La Commission européenne visée par une cyberattaque AI",
-      "category": "cybersécurité",
-      "url": "https://audiovisual.ec.europa.eu/en/media/video/I-298222"
+      "title": "Anthropic : IPO record à 81,3 Md$",
+      "category": "technologie / marchés",
+      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
     },
     {
-      "title": "Anthropic : IPO record, débâcle boursière",
-      "category": "marchés / IA",
-      "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+      "title": "Nvidia : démission de Jensen Huang",
+      "category": "IA / industrie",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition?ftag=YHF4eb9d17"
     },
     {
-      "title": "SEC enquête sur la comptabilité de Nvidia",
-      "category": "marchés / semi‑conducteurs",
-      "url": "https://www.streetinsider.com/Reuters/Exclusive-US%2BSECs%2BNvidia%2Bprobe%2Bis%2Bexamining%2Bpotential%2Baccounting-issues%2C%2Bsources%2Bsay/27381042.html"
+      "title": "US : règle fermant la faille d'accès distant",
+      "category": "géopolitique / sécurité industrielle",
+      "url": "https://www.washingtonpost.com/technology/2026/11/16/trump-officials-issue-rule-restrict-sales-ai-chips-china/"
     }
   ],
   "readings": [
     {
-      "title": "Inside the $900bn data centre bet",
-      "source": "Financial Times",
-      "url": "https://ft.trib.al/odaDueL"
+      "title": "The Global Economy Looks Vulnerable to an AI",
+      "source": "Wall Street Journal",
+      "url": "https://stocks.apple.com/ApNQ8CDaxR8OSAIBEI4STjQ"
     },
     {
-      "title": "ARTEX in the Wild: Storm‑0940 report",
-      "source": "Wiz Research",
-      "url": "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors"
+      "title": "Instead of Taking Your Job, A.I. Might Transform",
+      "source": "The New Yorker",
+      "url": "https://www.newyorker.com/culture/open-questions/instead-of-taking-your-job-ai-might-transform-it"
     }
   ],
   "date": "2026-11-21",
