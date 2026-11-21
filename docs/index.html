@@ -1,135 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101820">
-  <meta name="description" content="THE SIGNAL — Chaque matin, l’essentiel de l’actualité stratégique. Une veille spécialisée en technologie, économie, industrie et géopolitique.">
-  <title>THE SIGNAL. — Executive Intelligence Brief</title>
+  <title>THE SIGNAL. — Executive Intelligence</title>
+  <meta name="description" content="Chaque matin, l'essentiel de l'actualité stratégique. Tech, économie, industrie, cyber et géopolitique.">
   <style>
-    :root { color-scheme: dark; --bg:#101820; --panel:#17232b; --ink:#f5f1e9; --muted:#a9b1bb; --gold:#d8a76c; --line:#34414a; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:inherit; }
-    a:focus-visible { outline:2px solid var(--gold); outline-offset:4px; border-radius:2px; }
-    .wrap { max-width:850px; padding:0 25px; margin:auto; }
-    .mast { padding:69px 0 45px; border-bottom:1px solid var(--line); }
-    .eyebrow { text-transform:uppercase; letter-spacing:.21em; font-size:11px; font-weight:700; color:var(--gold); }
-    .logo { font-size:clamp(43px,8vw,78px); line-height:1; font-weight:800; letter-spacing:-.065em; margin:14px 0 22px; }
-    .rule { width:48px; height:3px; background:var(--gold); margin-bottom:22px; }
-    .baseline { font-size:clamp(19px,3.6vw,26px); letter-spacing:-.025em; line-height:1.35; font-weight:500; margin:0 0 12px; }
-    .descriptor { font-size:13px; color:var(--muted); margin:0; }
-    .edition { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:24px 0 12px; flex-wrap:wrap; }
-    .date { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
-    .status { color:var(--muted); font-size:12px; }
-    h2 { margin:34px 0 15px; color:var(--gold); font-size:12px; letter-spacing:.19em; text-transform:uppercase; font-weight:750; }
-    article { padding:20px 0 24px; border-bottom:1px solid var(--line); }
-    .number { color:var(--gold); font-size:12px; font-weight:700; margin-right:12px; }
-    .headline { font-size:clamp(19px,3vw,24px); letter-spacing:-.025em; line-height:1.36; font-weight:630; text-decoration:none; }
-    .headline:hover { color:var(--gold); }
-    .meta { margin-top:9px; font-size:11px; letter-spacing:.1em; color:var(--muted); font-weight:700; text-transform:uppercase; }
-    .summary { color:#d7dbdc; font-size:15px; margin:10px 0 0; }
-    .open { font-size:12px; text-decoration:none; color:var(--gold); display:inline-block; margin-top:10px; }
-    .note { margin:27px 0 0; padding:18px 21px; border-left:2px solid var(--gold); background:var(--panel); font-size:14px; color:var(--muted); }
-    footer { margin-top:76px; padding:28px 0 55px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
-    footer strong { color:var(--ink); }
-    .error { color:#f3c4b6; }
-    @media(min-width:700px) { .mast { padding-top:92px; } article { padding-right:42px; } }
-    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    :root{color-scheme:dark;--bg:#101820;--white:#F5F1E9;--muted:#A9B1BB;--gold:#D8A76C;--line:#34414A}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.54}
+    a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+    header{border-bottom:1px solid var(--line);padding:48px 20px 39px}
+    .wrap{max-width:880px;margin:auto}
+    .eyebrow,.kicker,.meta{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+    .logo{font-size:clamp(44px,8vw,78px);line-height:1;letter-spacing:-.065em;margin:13px 0 24px;font-weight:850}
+    .dash{height:3px;width:48px;background:var(--gold);margin:0 0 20px}
+    .baseline{font-size:clamp(18px,3vw,25px);font-weight:650;margin:0 0 6px}
+    .description{color:var(--muted);font-size:14px;margin:0}
+    main{padding:30px 20px 75px}
+    .edition{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:52px}
+    section{margin:0 0 53px}h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 24px}
+    article{padding:21px 0;border-bottom:1px solid var(--line)}article:first-of-type{padding-top:0}
+    article h3{font-size:clamp(19px,2.8vw,24px);line-height:1.25;letter-spacing:-.025em;margin:0 0 9px}
+    .category{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:650}
+    article p{font-size:15px;color:#DCE1E4;margin:12px 0 8px;line-height:1.65}
+    .source{font-size:12px;display:inline-block;margin-top:7px}
+    .num{color:var(--gold);font-size:13px;padding-right:12px;vertical-align:middle}
+    .datapoints{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .point{padding:18px;border:1px solid var(--line);border-radius:9px}
+    .point .value{font-size:26px;letter-spacing:-.04em;font-weight:750}
+    .point h3{font-size:14px;line-height:1.3;margin:3px 0}.point p{font-size:13px;color:var(--muted);margin:9px 0}
+    .editorial{border-left:3px solid var(--gold);padding:5px 0 5px 22px}.editorial h3{font-size:23px;margin:0 0 10px}
+    .editorial p{color:#DCE1E4}
+    .notice{color:var(--muted);font-size:14px;border:1px solid var(--line);padding:17px;border-radius:9px}
+    footer{border-top:1px solid var(--line);padding:22px 20px 35px;color:var(--muted);font-size:12px}
+    @media(max-width:560px){header{padding-top:38px}main{padding-top:22px}.datapoints{grid-template-columns:1fr}.edition{margin-bottom:34px}section{margin-bottom:43px}}
   </style>
 </head>
 <body>
-  <header class="mast">
-    <div class="wrap">
-      <div class="eyebrow">Executive Intelligence Brief</div>
-      <div class="logo">THE SIGNAL.</div>
-      <div class="rule" aria-hidden="true"></div>
-      <p class="baseline">Chaque matin, l’essentiel de l’actualité stratégique.</p>
-      <p class="descriptor">Une veille spécialisée en technologie, économie, industrie et géopolitique.</p>
-    </div>
-  </header>
-  <main class="wrap" id="main">
-    <div class="edition">
-      <div class="date" id="edition-date">Édition en cours de chargement</div>
-      <div class="status" id="update-status">Chargement de la sélection…</div>
-    </div>
-    <section aria-labelledby="news-heading">
-      <h2 id="news-heading">01 / The Briefing</h2>
-      <div id="news-list"></div>
-    </section>
-    <section aria-labelledby="readings-heading">
-      <h2 id="readings-heading">02 / The Reading Room</h2>
-      <div id="readings-list"></div>
-    </section>
-    <aside class="note">Cette page publie pour l’instant la même sélection que le widget : trois actualités et deux lectures. L’édition intégrale sera ajoutée lors de la prochaine étape de développement.</aside>
+  <header><div class="wrap">
+    <div class="eyebrow">Executive Intelligence Brief</div>
+    <div class="logo">THE SIGNAL.</div><div class="dash"></div>
+    <p class="baseline">Chaque matin, l’essentiel de l’actualité stratégique.</p>
+    <p class="description">Une veille spécialisée en technologie, économie, industrie et géopolitique.</p>
+  </div></header>
+  <main class="wrap">
+    <div class="edition"><span id="edition">Chargement de l’édition…</span><span>Un signal, pas du bruit.</span></div>
+    <div id="content"><p class="notice">Récupération de l’édition du jour…</p></div>
   </main>
-  <footer><div class="wrap"><strong>THE SIGNAL.</strong> — Veille quotidienne indépendante · Sources accessibles dans chaque article.</div></footer>
-  <script>
-    'use strict';
-    const $ = (id) => document.getElementById(id);
-    const make = (tag, text, className) => {
-      const el = document.createElement(tag);
-      if (text !== undefined) el.textContent = String(text);
-      if (className) el.className = className;
-      return el;
-    };
-    function safeUrl(value) {
-      try {
-        const u = new URL(value);
-        return u.protocol === 'https:' ? u.href : null;
-      } catch { return null; }
-    }
-    function render(items, container, kind) {
-      container.replaceChildren();
-      items.forEach((item, i) => {
-        const article = make('article');
-        const line = make('div');
-        line.append(make('span', String(i + 1).padStart(2, '0'), 'number'));
-        const url = safeUrl(item.url);
-        const title = make(url ? 'a' : 'span', item.title || 'Sans titre', 'headline');
-        if (url) {
-          title.href = url;
-          title.target = '_blank';
-          title.rel = 'noopener noreferrer';
-        }
-        line.append(title);
-        article.append(line);
-        article.append(make('div', kind === 'news' ? (item.category || 'ACTUALITÉ') : (item.source || 'LECTURE'), 'meta'));
-        if (typeof item.summary === 'string' && item.summary.trim()) article.append(make('p', item.summary, 'summary'));
-        if (url) {
-          const read = make('a', 'Consulter la source ↗', 'open');
-          read.href = url;
-          read.target = '_blank';
-          read.rel = 'noopener noreferrer';
-          article.append(read);
-        }
-        container.append(article);
-      });
-    }
-    async function load() {
-      try {
-        const res = await fetch('./signal.json', { cache:'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
-        if (!Array.isArray(data.news) || !Array.isArray(data.readings)) throw new Error('Format invalide');
-        if (typeof data.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(data.date)) {
-          const [year, month, day] = data.date.split('-').map(Number);
-          const date = new Date(Date.UTC(year, month - 1, day, 12));
-          $('edition-date').textContent = 'Édition du ' + new Intl.DateTimeFormat('fr-FR', { dateStyle:'long', timeZone:'UTC' }).format(date);
-        } else {
-          $('edition-date').textContent = 'Dernière édition';
-        }
-        render(data.news, $('news-list'), 'news');
-        render(data.readings, $('readings-list'), 'readings');
-        $('update-status').textContent = 'Actualisée depuis THE SIGNAL';
-      } catch (err) {
-        $('edition-date').textContent = 'Édition indisponible';
-        $('update-status').textContent = 'Impossible de charger les actualités.';
-        $('update-status').classList.add('error');
-      }
-    }
-    load();
-  </script>
+  <footer><div class="wrap">THE SIGNAL. · Veille quotidienne indépendante · <a href="signal.json">Flux JSON</a></div></footer>
+<script>
+const $=id=>document.getElementById(id);
+function el(tag,cls,text){const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node}
+function section(root,num,title,items,render){const s=el('section');s.append(el('h2',null,num+' / '+title));items.forEach((item,i)=>render(s,item,i));root.append(s)}
+function link(article,url){if(typeof url==='string'&&url.startsWith('https://')){const a=el('a','source','Consulter la source ↗');a.href=url;a.target='_blank';a.rel='noopener noreferrer';article.append(a)}}
+function stories(parent,item,i,summaryField='summary'){
+  const article=el('article');const h3=el('h3');h3.append(el('span','num',String(i+1).padStart(2,'0')));h3.append(document.createTextNode(item.title||'Sans titre'));article.append(h3);
+  article.append(el('div','category',item.category||item.source||''));
+  if(item[summaryField])article.append(el('p',null,item[summaryField]));link(article,item.url);parent.append(article)
+}
+function legacy(data,root){section(root,'01','The Briefing',data.news||[],(p,x,i)=>stories(p,x,i));section(root,'02','The Reading Room',data.readings||[],(p,x,i)=>stories(p,x,i))}
+async function load(){try{
+ const response=await fetch('signal.json?edition='+Date.now(),{cache:'no-store'});
+ if(!response.ok)throw new Error('HTTP '+response.status);
+ const data=await response.json();
+ if(data.date){const [y,m,d]=data.date.split('-');$('edition').textContent='Édition du '+d+'/'+m+'/'+y}
+ else $('edition').textContent='THE SIGNAL — édition du jour';
+ const root=$('content');root.replaceChildren();
+ if(!Array.isArray(data.critical)){legacy(data,root);return}
+ section(root,'01','Critical Developments',data.critical,(p,x,i)=>stories(p,x,i));
+ section(root,'02','The Radar',data.radar||[],(p,x,i)=>stories(p,x,i));
+ section(root,'03','Intelligence & Industrial Signals',data.intelligence||[],(p,x,i)=>stories(p,x,i));
+ const dp=el('section');dp.append(el('h2',null,'04 / Data Points'));
+ const grid=el('div','datapoints');(data.data_points||[]).forEach(item=>{
+   const box=el('div','point');box.append(el('div','value',item.value||''));box.append(el('h3',null,item.label||''));
+   box.append(el('p',null,item.context||''));link(box,item.url);grid.append(box)
+ });dp.append(grid);root.append(dp);
+ section(root,'05','Reading Room',data.reading_room||[],(p,x,i)=>stories(p,x,i,'why_read'));
+ if(data.editorial){const s=el('section');s.append(el('h2',null,'06 / Editorial Intelligence'));
+ const block=el('div','editorial');block.append(el('h3',null,data.editorial.title||''));block.append(el('p',null,data.editorial.text||''));s.append(block);root.append(s)}
+ }catch(err){$('content').replaceChildren(el('p','notice','Édition momentanément indisponible. Réessaie dans quelques instants.'));console.error(err)}
+}
+load();
+</script>
 </body>
 </html>
