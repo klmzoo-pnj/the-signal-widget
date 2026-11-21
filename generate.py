@@ -72,7 +72,13 @@ response = client.responses.create(
     input=prompt,
 )
 
-data = json.loads(response.output_text)
+raw = response.output_text.strip()
+
+if raw.startswith("```"):
+    raw = raw.split("\n", 1)[1]
+    raw = raw.rsplit("```", 1)[0].strip()
+
+data = json.loads(raw)
 
 if not isinstance(data, dict):
     raise ValueError("Réponse JSON invalide")
