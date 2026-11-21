@@ -34,25 +34,50 @@ RÈGLES DE VÉRIFICATION :
 - Actualités : idéalement 72 h, jusqu'à 7 jours si nécessaire.
 - Lectures : enquêtes et grands formats de moins de 90 jours.
 - Pas de doublons entre rubriques ; plusieurs secteurs représentés.
+- Chaque sujet doit justifier sa présence : nouveauté, importance,
+  caractère peu évident, conséquence stratégique compréhensible.
+- AUCUN quota n'est un objectif à atteindre. N'invente ni n'ajoute
+  des sujets faibles pour compléter une liste.
 - Si tu n'as pas assez de faits fiables, rends moins d'items plutôt que
   d'inventer. Ne laisse pas de champs vides.
 
 RENVOIE UNIQUEMENT UN OBJET JSON VALIDE (sans Markdown) comportant :
 
-"critical" : 5 objets (minimum 3 si sources insuffisantes) avec
+"critical" : entre 2 et 5 objets, seulement les nouvelles structurantes, avec
 {{"title":"...", "category":"...", "summary":"...", "url":"https://..."}}.
 Les 3 PREMIERS titres font 54 caractères maximum, sans points de suspension.
 Résumés de 45 à 75 mots : faits et pourquoi ils comptent.
 
-"radar" : idéalement 8 objets (6 à 10 acceptables) avec
+"radar" : 0 à 4 objets (CIBLE 2 OU 3 UNIQUEMENT SI MÉRITÉS) avec
 {{"title":"...", "category":"...", "summary":"...", "url":"https://..."}}.
-Résumés de 20 à 35 mots, sujets différents de critical.
+CE N'EST PAS UNE RUBRIQUE DE REMPLISSAGE. Sélectionne exclusivement
+les 2, 3 ou 4 meilleures informations discrètes du jour.
+Fenêtre PRIORITAIRE : les dernières 24 à 48 h en heure de Paris.
+Tolérance de 72 h seulement pour un nouveau développement vérifiable.
+Un événement plus ancien ne peut être retenu que si un FAIT NOUVEAU
+dans les dernières 48 h modifie sa portée ; précise ce fait nouveau.
+Chaque entrée doit passer ces 4 tests :
+1. FRAÎCHEUR : fait nouveau documenté, pas un sujet générique ;
+2. PORTÉE : implication claire pour entreprises, pouvoir ou capital ;
+3. ORIGINALITÉ : signal encore peu visible, pas simple reprise de titre ;
+4. UTILITÉ : le lecteur comprend ce qui change SANS cliquer.
+Donne priorité aux startups/VC, chaînes industrielles, fournisseurs
+stratégiques, capital, intelligence, cyber et régulation concrète.
+Écarte les déclarations politiques sans suite, chiffres économiques sans
+écart ni contexte, résumés de discussions et auditions anecdotiques.
+Résumés de 50 à 75 mots, présentant dans cet ordre :
+- Le fait vérifié et daté (qui, quoi, nouveauté concrète) ;
+- Le contexte ou la référence qui rend la nouvelle remarquable ;
+- LE SIGNAL : implication stratégique ou question précise à surveiller.
+N'écris jamais une hypothèse comme un fait.
+Si aucune information ne passe les tests, renvoie "radar": [].
+Les sujets sont distincts de "critical".
 
-"intelligence" : 2 objets (1 à 3 acceptables) avec
+"intelligence" : 0 à 3 objets, seulement si pertinents, avec
 {{"title":"...", "category":"...", "summary":"...", "url":"https://..."}}.
 Renseignement, défense, cyber ou capacités industrielles.
 
-"data_points" : 4 objets (3 à 6 acceptables), CHACUN avec SIX clés
+"data_points" : 1 à 4 objets réellement contextualisés, CHACUN avec SIX clés
 EXACTES et obligatoires, toutes de type chaîne :
 {{"label":"...", "value":"290 M€", "context":"...",
   "comparison":"...", "stakes":"...", "url":"https://..."}}.
@@ -70,7 +95,7 @@ solide n'est trouvée, choisis une AUTRE donnée. Évite les chiffres isolés,
 les unités ambiguës et les comparaisons de périmètres incompatibles.
 Le nombre de 4 est une cible, la qualité prime sur la quantité.
 
-"reading_room" : 5 objets (minimum 2 si nécessaire) avec
+"reading_room" : 1 à 5 lectures de grande qualité avec
 {{"title":"...", "source":"...", "why_read":"...", "url":"https://..."}}.
 Les 2 PREMIERS titres font 48 caractères maximum, sans points de suspension.
 Pourquoi lire : 20 à 40 mots, enquête ou analyse approfondie authentique.
@@ -166,19 +191,19 @@ def build_edition(data):
         raise ValueError("Réponse JSON : objet attendu")
 
     critical = normalize_entries(
-        data, "critical", ("title", "category", "summary", "url"), 3, 5
+        data, "critical", ("title", "category", "summary", "url"), 2, 5
     )
     radar = normalize_entries(
-        data, "radar", ("title", "category", "summary", "url"), 6, 10
+        data, "radar", ("title", "category", "summary", "url"), 0, 4
     )
     intelligence = normalize_entries(
-        data, "intelligence", ("title", "category", "summary", "url"), 1, 3
+        data, "intelligence", ("title", "category", "summary", "url"), 0, 3
     )
     data_points = normalize_entries(
-        data, "data_points", ("label", "value", "context", "comparison", "stakes", "url"), 3, 6
+        data, "data_points", ("label", "value", "context", "comparison", "stakes", "url"), 1, 4
     )
     reading_room = normalize_entries(
-        data, "reading_room", ("title", "source", "why_read", "url"), 2, 5
+        data, "reading_room", ("title", "source", "why_read", "url"), 1, 5
     )
 
     editorial = data.get("editorial")
