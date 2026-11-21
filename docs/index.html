@@ -21,7 +21,10 @@
     .description{color:var(--muted);font-size:14px;margin:0}
     main{padding:30px 20px 75px}
     .edition{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:52px}
-    section{margin:0 0 53px}h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 24px}
+    section{margin:0 0 53px}
+    h2{font-size:clamp(20px,3vw,26px);line-height:1.2;letter-spacing:-.015em;text-transform:uppercase;color:var(--white);margin:7px 0 6px}
+    .section-number{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);font-weight:750}
+    .section-tagline{font-size:15px;color:var(--muted);margin:0 0 24px;line-height:1.5}
     article{padding:21px 0;border-bottom:1px solid var(--line)}article:first-of-type{padding-top:0}
     article h3{font-size:clamp(19px,2.8vw,24px);line-height:1.25;letter-spacing:-.025em;margin:0 0 9px}
     .category{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:650}
@@ -29,9 +32,13 @@
     .source{font-size:12px;display:inline-block;margin-top:7px}
     .num{color:var(--gold);font-size:13px;padding-right:12px;vertical-align:middle}
     .datapoints{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .point{padding:18px;border:1px solid var(--line);border-radius:9px}
-    .point .value{font-size:26px;letter-spacing:-.04em;font-weight:750}
-    .point h3{font-size:14px;line-height:1.3;margin:3px 0}.point p{font-size:13px;color:var(--muted);margin:9px 0}
+    .point{padding:22px;border:1px solid var(--line);border-radius:9px;background:#151f28}
+    .point .value{font-size:clamp(27px,3vw,38px);letter-spacing:-.045em;font-weight:780;color:var(--white);line-height:1.15}
+    .point h3{font-size:15px;line-height:1.4;margin:8px 0 12px}
+    .point p{font-size:13px;color:#DCE1E4;margin:10px 0;line-height:1.6}
+    .point .point-heading{color:var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:17px 0 3px}
+    .point .point-context{color:var(--muted)}
+    .point .source{margin-top:14px}
     .editorial{border-left:3px solid var(--gold);padding:5px 0 5px 22px}.editorial h3{font-size:23px;margin:0 0 10px}
     .editorial p{color:#DCE1E4}
     .notice{color:var(--muted);font-size:14px;border:1px solid var(--line);padding:17px;border-radius:9px}
@@ -54,7 +61,23 @@
 <script>
 const $=id=>document.getElementById(id);
 function el(tag,cls,text){const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node}
-function section(root,num,title,items,render){const s=el('section');s.append(el('h2',null,num+' / '+title));items.forEach((item,i)=>render(s,item,i));root.append(s)}
+const signatures={
+ 'Critical Developments':['THE BRIEFING','Les cinq actualités qui changent la donne.'],
+ 'The Radar':['THE RADAR','Les signaux à ne pas manquer.'],
+ 'Intelligence & Industrial Signals':['STRATEGIC INTELLIGENCE','Dans les coulisses de la puissance.'],
+ 'Data Points':['THE NUMBERS','Les chiffres, leurs comparaisons et ce qu’ils révèlent.'],
+ 'Reading Room':['DEEP READING','Les enquêtes et analyses qui méritent votre temps.'],
+ 'Editorial Intelligence':['THE BIG PICTURE','Relier les faits. Déceler les bascules.'],
+ 'The Briefing':['THE BRIEFING','Les actualités essentielles du jour.'],
+ 'The Reading Room':['DEEP READING','Les lectures qui méritent votre temps.']
+};
+function heading(sectionNode,num,title){
+ const signature=signatures[title]||['THE SIGNAL',''];
+ sectionNode.append(el('div','section-number',num+' / '+signature[0]));
+ sectionNode.append(el('h2',null,title));
+ sectionNode.append(el('p','section-tagline',signature[1]));
+}
+function section(root,num,title,items,render){const s=el('section');heading(s,num,title);items.forEach((item,i)=>render(s,item,i));root.append(s)}
 function link(article,url){if(typeof url==='string'&&url.startsWith('https://')){const a=el('a','source','Consulter la source ↗');a.href=url;a.target='_blank';a.rel='noopener noreferrer';article.append(a)}}
 function stories(parent,item,i,summaryField='summary'){
   const article=el('article');const h3=el('h3');h3.append(el('span','num',String(i+1).padStart(2,'0')));h3.append(document.createTextNode(item.title||'Sans titre'));article.append(h3);
@@ -73,13 +96,16 @@ async function load(){try{
  section(root,'01','Critical Developments',data.critical,(p,x,i)=>stories(p,x,i));
  section(root,'02','The Radar',data.radar||[],(p,x,i)=>stories(p,x,i));
  section(root,'03','Intelligence & Industrial Signals',data.intelligence||[],(p,x,i)=>stories(p,x,i));
- const dp=el('section');dp.append(el('h2',null,'04 / Data Points'));
+ const dp=el('section');heading(dp,'04','Data Points');
  const grid=el('div','datapoints');(data.data_points||[]).forEach(item=>{
    const box=el('div','point');box.append(el('div','value',item.value||''));box.append(el('h3',null,item.label||''));
-   box.append(el('p',null,item.context||''));link(box,item.url);grid.append(box)
+   if(item.context)box.append(el('p','point-context',item.context));
+   if(item.comparison){box.append(el('div','point-heading','La comparaison'));box.append(el('p',null,item.comparison));}
+   if(item.stakes){box.append(el('div','point-heading','L’enjeu'));box.append(el('p',null,item.stakes));}
+   link(box,item.url);grid.append(box)
  });dp.append(grid);root.append(dp);
  section(root,'05','Reading Room',data.reading_room||[],(p,x,i)=>stories(p,x,i,'why_read'));
- if(data.editorial){const s=el('section');s.append(el('h2',null,'06 / Editorial Intelligence'));
+ if(data.editorial){const s=el('section');heading(s,'06','Editorial Intelligence');
  const block=el('div','editorial');block.append(el('h3',null,data.editorial.title||''));block.append(el('p',null,data.editorial.text||''));s.append(block);root.append(s)}
  }catch(err){$('content').replaceChildren(el('p','notice','Édition momentanément indisponible. Réessaie dans quelques instants.'));console.error(err)}
 }
