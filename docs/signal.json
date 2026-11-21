@@ -1,0 +1,31 @@
+
+{
+  "date": "2026-11-21",
+  "edition": "THE SIGNAL",
+  "news": [
+    {
+      "title": "Washington étend ses contrôles sur l'accès au calcul IA",
+      "category": "GEOPOLITIQUE · INDUSTRIE"
+    },
+    {
+      "title": "Wall Street s'inquiète du financement des infrastructures IA",
+      "category": "MARCHES · IA"
+    },
+    {
+      "title": "L'Europe face aux limites de sa souveraineté industrielle",
+      "category": "EUROPE · INDUSTRIE"
+    }
+  ],
+  "readings": [
+    {
+      "title": "China's Vibe-Coding Capital",
+      "source": "THE NEW YORKER",
+      "url": "https://www.newyorker.com"
+    },
+    {
+      "title": "China's Undercover Chip Labs in Taiwan",
+      "source": "REST OF WORLD",
+      "url": "https://restofworld.org"
+    }
+  ]
+}
