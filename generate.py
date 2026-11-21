@@ -69,7 +69,6 @@ response = client.responses.create(
     model="gpt-5-mini",
     tools=[{"type": "web_search"}],
     tool_choice="required",
-    text={"format": {"type": "json_object"}},
     input=prompt,
 )
 
