@@ -1,131 +1,123 @@
 {
   "critical": [
     {
-      "title": "Anthropic : IPO record à 81,3 Md$",
-      "category": "technologie / marchés",
-      "summary": "Anthropic (Claude) est entré en Bourse les 18–19 nov. 2026, levant environ 81,3 milliards $ et atteignant une valorisation d'environ 1,5–1,8 T$ à l'ouverture. C’est l’offre la plus importante jamais réalisée ; elle cristallise la concentration du capital dans quelques labos d’IA et augmente la probabilité d’une reconfiguration rapide des financements et des indices actions. Pourquoi ça compte : impact immédiat sur l’appétit pour le risque et sur la politique de financement des hyperscalers.",
-      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
+      "title": "États‑Unis durcissent contrôles sur puces AI",
+      "category": "Géopolitique / Industrie",
+      "summary": "Fait (16 nov. 2026) : l’administration américaine a publié une règle resserrant les restrictions sur l’accès des entreprises chinoises aux puces haute performance (mesure visant notamment les locations de serveurs à l’étranger). Contexte : décision prise avant des rencontres bilatérales et après enquêtes sur détournements d’exportations. Signal : accélération de la « dé‑coupe » technologique US‑China, pression directe sur fournisseurs, clouds et chaînes d’approvisionnement régionale.",
+      "url": "https://live.euronext.com/en/financial-news/us-curb-chinas-access-ai-chips-trump-heads-asia"
     },
     {
-      "title": "Nvidia : démission de Jensen Huang",
-      "category": "IA / industrie",
-      "summary": "Le fondateur‑CEO de Nvidia, Jensen Huang, a démissionné (annonce publique du 12 nov. 2026). Le conseil a formé une gouvernance de transition et a déclaré qu’il n’envisage pas de réintégration. L’affaire, liée à des liaisons personnelles et à une enquête sur des ventes détournées de puces, a précipité un fort éclatement de valorisation du secteur et relance le débat sur gouvernance, contrôle des exportations et dépendance de l’écosystème IA à un fournisseur unique.",
-      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition?ftag=YHF4eb9d17"
+      "title": "TSMC restreint livraisons pour designers chinois",
+      "category": "Supply chain / Technologie",
+      "summary": "Fait (19 nov. 2026) : selon plusieurs sources, Taiwan Semiconductor Manufacturing Company a suspendu ou limité les commandes de certains designers chinois et demandé des licences pour les commandes utilisant des procédés ≤16 nm. Contexte : mesure en réponse aux nouvelles règles américaines sur l’accès distant aux GPUs. Signal : ferme réduction d’une voie restante pour la production de puces AI avancées en Chine, accélérant l’effort de souveraineté industrielle asiatique et la segmentation du marché.",
+      "url": "https://ca.investing.com/news/stock-market-news/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say-4969601"
     },
     {
-      "title": "US : règle fermant la faille d'accès distant",
-      "category": "géopolitique / sécurité industrielle",
-      "summary": "Le 16 nov. 2026, le Département du Commerce américain (BIS) a publié une règle provisoire restreignant l’accès distant (« remote access ») aux puces et serveurs d’IA, visant à empêcher des sociétés chinoises d’utiliser des centres de calcul tiers pour contourner les contrôles. Contexte : la mesure suit les enquêtes sur des détournements via des partenaires en Asie du Sud‑Est. Signal : accélération de l’autonomie des chaînes d’approvisionnement et pression sur fournisseurs/cloud tiers non-américains.",
-      "url": "https://www.washingtonpost.com/technology/2026/11/16/trump-officials-issue-rule-restrict-sales-ai-chips-china/"
+      "title": "NVIDIA : trimestre record mais risques",
+      "category": "Technologie / Marchés",
+      "summary": "Fait (17 nov. 2026) : NVIDIA a annoncé un chiffre d’affaires Q3 FY27 record de $115,8 Md (Data Center $107,6 Md), +103 % en glissement annuel, et prévoit $130 Md pour le trimestre suivant sans prendre en compte de revenus Data Center provenant de Chine. Contexte : premier rapport significatif après les tensions managériales. Signal : concentration extrême de la valeur dans l’écosystème AI et vulnérabilité macro‑géopolitique liée aux flux de compute.",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001045810/46a9c98c-87ae-40f5-acac-7d9264b18eb4.pdf"
     },
     {
-      "title": "France : 50 000 obus commandés à KNDS",
-      "category": "défense / chaîne industrielle",
-      "summary": "La DGA a notifié le 12 nov. 2026 une double commande à KNDS Ammo France : montée en capacité du site de La Chapelle‑Saint‑Ursin (de 60 000 à 150 000 obus/an d’ici 2029) et commande de 50 000 obus livrables 2029–2030. Pourquoi c’est structurant : réponse concrète à la souveraineté munitions, visibilité industrielle pour la BITD française et signal aux partenaires européens d’une priorisation des capacités de gros calibres.",
-      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
+      "title": "Débat français sur chiffrement : article 16a retiré",
+      "category": "Renseignement / Cyber",
+      "summary": "Fait (16 nov. 2026) : les députés français ont supprimé l’article 16a du projet de loi cybersécurité qui visait à interdire des mécanismes laissant un accès aux données chiffrées. Contexte : tension entre exigences judiciaires, capacités des services de renseignement et protection des libertés civiles. Signal : volonté politique de conserver des garde‑fous sur l’accès légal aux données chiffrées, mais persistance du problème opérationnel pour les enquêtes et la sécurité nationale.",
+      "url": "https://www.intelligenceonline.com/europe-russia/2026/11/16/mps-scrap-clause-causing-concern-for-government-on-encrypted-messaging%2C110930526-bre"
     }
   ],
   "radar": [
     {
-      "title": "Resserrement brutal du 'trade' IA",
-      "category": "marchés / VC",
-      "summary": "Fait (20 nov. 2026) : après la large IPO d’Anthropic et la tourmente autour de Nvidia, les indices technologiques ont subi une baisse marquée (S&P et Nasdaq en forte baisse). Contexte : valorisations élevées, inquiétudes sur coûts d’infrastructure et risque régulatoire. Le signal : les sorties de marché (IPO massif) ne suffisent plus à soutenir la prime IA ; à surveiller — repli des valorisations, ralentissement des nouvelles émissions et raréfaction du capital-risque pour rounds à forts besoins d’IA.",
-      "url": "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad"
+      "title": "Sommet spécial ONU : sécurité de l’IA à Bridgetown",
+      "category": "Gouvernance / IA",
+      "summary": "Fait (ouverture 23 nov. 2026) : l’ONU et la Barbade co‑organisent le « Bridgetown Special Summit on AI Safety » (23 novembre) pour débattre d’un cadre multilatéral de gestion des risques AI. Contexte : succession d’initiatives internationales (UE, G7) cherchant mécanismes d’oversight. Signal : opportunité pour États‑tiers et gouvernements émergents d’imposer des standards globaux ; à surveiller : texte cadre proposé et sa capacité à lier contrôle technique et transfert de technologies sensibles.",
+      "url": "https://www.un.org/digital-emerging-technologies/es/content/barbados-and-united-nations-co-host-special-summit-ai-safety-23-november"
     },
     {
-      "title": "Tension inter‑agences sur les exportations de puces",
-      "category": "renseignement / politique industrielle",
-      "summary": "Fait (20 nov. 2026) : le Trésor américain a déclaré qu’aucune restriction supplémentaire n’était nécessaire sur la vente d’anciens modèles de puces Nvidia vers la Chine, alors que le Commerce a durci les règles d’accès distant la semaine précédente. Contexte : divergence publique entre agences sur la stratégie export. Le signal : instabilité politique pouvant produire des règles changeantes à court terme — risque opérationnel pour fournisseurs et hyperscalers, opportunité pour relocalisation et pour acteurs non‑américains.",
-      "url": "https://apnews.com/article/88142455395552afe74caec3399a648b"
+      "title": "OpenAI publie GPT‑6.2 « Astra »",
+      "category": "Technologie / IA",
+      "summary": "Fait (17 nov. 2026) : OpenAI a annoncé la mise à disposition publique de GPT‑6.2 Astra et Sol, décrivant Astra comme le premier modèle publié atteignant un seuil « High » d’auto‑amélioration. Contexte : cadence rapide des sorties de modèles très capables et discussions internationales sur risques d’agenticité. Signal : nouvel input pour débats réglementaires et pour les acteurs industriels sur gouvernance des modèles à rétroaction autonome et diffusion contrôlée des poids.",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/?trk=public_post_comment-text"
     }
   ],
   "intelligence": [
     {
-      "title": "Paris accuse l'IRGC du piratage des frigos",
-      "category": "cybersécurité / renseignement",
-      "summary": "Le 9 nov. 2026 le gouvernement français a attribué aux Gardiens de la révolution islamique (IRGC) une vaste attaque ayant perturbé les systèmes de réfrigération de supermarchés en octobre. Contexte : incidents multi‑pays et présumée action du groupe ‘Shahid Kaveh’. Le signal : attribution publique d’un État‑acteur sur un sabotage industriel — implications pour sanctions européennes, posture cyberdéfensive et protection d’infrastructures OT critiques.",
-      "url": "https://www.reuters.com/article/idUSKBN2X70XX"
+      "title": "Paris affirme qu’Iran a visé Israël pendant Paris 2024",
+      "category": "Renseignement / Cyberopérations",
+      "summary": "Fait (12 nov. 2026) : Intelligence Online publie qu’une cyber‑opération attribuée par Paris à des unités liées à l’Iran visait Israël durant la cérémonie d’ouverture des Jeux de Paris (26 juillet 2024), et que des attaques sur les réfrigérateurs de supermarchés en octobre ont été liées à des groupes iraniens. Contexte : montée des opérations numériques de nuisance transfrontalières. Signal : renforcement des réponses diplomatiques et pressions pour capaciter ANSSI/DGSE sur attribution et riposte.",
+      "url": "https://www.intelligenceonline.com/europe-russia/2026/11/12/paris-claims-tehran-targeted-israel-during-paris-games%2C110919072-art"
     }
   ],
   "data_points": [
     {
-      "label": "Anthropic IPO, 19 Nov 2026 (levée)",
-      "value": "81,3 Md$",
-      "context": "Montant levé lors de l'introduction en Bourse (prix d'émission $83, 19 nov. 2026).",
-      "comparison": "Record précédent : SpaceX ~75 Md$ (introduction juin 2026). Source : AP/FT (nov. 2026).",
-      "stakes": "Renforce la concentration des capitaux sur quelques acteurs IA et élève les enjeux de stabilité financière et de gouvernance pour l’écosystème.",
-      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
+      "label": "NVIDIA — CA Q3 FY27 (clôture 25 oct. 2026)",
+      "value": "115.8 B$",
+      "context": "Chiffre d’affaires consolidé trimestriel de NVIDIA pour Q3 FY27 (période close 25/10/2026).",
+      "comparison": "+103 % vs Q3 FY26 ($57.0 B) et +20 % vs Q2 FY27 ($96.2 B), d’après le communiqué 8‑K du 17/11/2026.",
+      "stakes": "Confirme la centralité du Data Center dans l’économie AI; renforce l’impact des politiques d’export sur revenus et chaîne d’approvisionnement.",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001045810/46a9c98c-87ae-40f5-acac-7d9264b18eb4.pdf"
     },
     {
-      "label": "Capacité obus 155 mm (France, cible 2029)",
-      "value": "150 000/an",
-      "context": "Objectif de production du site KNDS La Chapelle‑Saint‑Ursin fixé par la DGA pour 2029 (commande/plan notifié 12 nov. 2026).",
-      "comparison": "⇧ vs 60 000/an en 2025 (donnée DGA) — multiplication par 2,5 en quatre ans.",
-      "stakes": "Augmentation critique de souveraineté munitions pour la France et mesure de résilience BITD en haute intensité ; influence les capacités d’export et planning fournisseurs.",
-      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armes/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
-    },
-    {
-      "label": "S&P 500, séance 20 Nov 2026",
-      "value": "-3,7 %",
-      "context": "Baisse journalière du S&P 500 liée à une vente massive d’actions technologiques et IA (clôture 20 nov. 2026).",
-      "comparison": "Perte journalière vs clôture précédente : -3,7% (pire semaine depuis 18 mois pour l'indice selon AP).",
-      "stakes": "Confirme l’extrême sensibilité des indices au risque IA et la possibilité d’une correction plus large affectant financement et valorisations des startups IA.",
-      "url": "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad"
+      "label": "Supermarchés touchés — attaque frigos (12 oct. 2026)",
+      "value": "≈700",
+      "context": "Nombre approximatif de magasins français affectés lors de l’attaque des systèmes de réfrigération (octobre 2026), sur un parc total national d’environ 10 000 enseignes.",
+      "comparison": "≈700 touchés ≈7 % du parc national (~700/10 000); incidents similaires signalés dans ≥9 pays européens en octobre‑novembre 2026.",
+      "stakes": "Met en lumière l’exposition opérationnelle des ICS dans la distribution alimentaire et le besoin immédiat d’audits et de mesures BITD pour protéger chaînes critiques.",
+      "url": "https://www.washingtonpost.com/world/2026/11/09/france-cyberattack-supermarket-fridge-hack/"
     }
   ],
   "reading_room": [
     {
-      "title": "The Global Economy Looks Vulnerable to an AI Bust",
-      "source": "Wall Street Journal",
-      "why_read": "Analyse approfondie des canaux par lesquels une correction des valeurs IA pourrait contaminer l’économie réelle : dépendance aux hyperscalers, exposition des marchés émergents, et scénarios de risque financier. Utile pour comprendre la macro‑fragilité née de la concentration du capital IA.",
-      "url": "https://stocks.apple.com/ApNQ8CDaxR8OSAIBEI4STjQ"
-    },
-    {
-      "title": "Instead of Taking Your Job, A.I. Might Transform It",
+      "title": "The Year Math Changed Forever",
       "source": "The New Yorker",
-      "why_read": "Réflexion longue sur les effets micro‑économiques et sociaux de l’IA dans le travail quotidien : nuance les récits simplistes de destruction d’emplois et identifie leviers éducatifs et réglementaires pertinents pour décideurs publics et RH d’entreprise.",
-      "url": "https://www.newyorker.com/culture/open-questions/instead-of-taking-your-job-ai-might-transform-it"
+      "why_read": "Enquête long format (1 nov. 2026) montrant comment modèles d’IA résolvent des problèmes mathématiques considérés autrefois hors de portée; révèle l’accélération scientifique induite par l’IA et les implications méthodologiques pour recherche fondamentale et validation des résultats.",
+      "url": "https://www.newyorker.com/magazine/2026/11/09/the-year-math-changed-forever"
     },
     {
-      "title": "La Malaisie s'offre 18 canons CAESAr",
-      "source": "OpexNews",
-      "why_read": "Reportage BITD qui illustre la dynamique commerciale de KNDS et la montée en puissance européenne des systèmes CAESAr en Indo‑Pacifique ; utile pour suivre exportations, localisation industrielle et effets sur chaînes d’approvisionnement munitions.",
-      "url": "https://opexnews.fr/malaisie-caesar-18-canons-knds-eurosatory-2026/"
+      "title": "Is A.I. Above the Law?",
+      "source": "The New Yorker",
+      "why_read": "Article analytique (28 sept. 2026) examinant lacunes juridiques face aux systèmes autonomes et aux risques existentiels; utile pour comprendre limites actuelles du cadre légal et les adaptations nécessaires pour la responsabilisation industrielle.",
+      "url": "https://www.newyorker.com/magazine/2026/09/28/is-ai-above-the-law"
+    },
+    {
+      "title": "Paris claims Tehran targeted Israel during Paris Games",
+      "source": "Intelligence Online",
+      "why_read": "Enquête (12 nov. 2026) sur des cyber‑opérations attribuées à l’Iran et leur ampleur opérationnelle ; l’article éclaire méthodes d’attribution françaises, limites de la réponse étatique et conséquences pour coopération européenne en cyber‑défense.",
+      "url": "https://www.intelligenceonline.com/europe-russia/2026/11/12/paris-claims-tehran-targeted-israel-during-paris-games%2C110919072-art"
     }
   ],
   "editorial": {
-    "title": "Concentration, contrôle et résilience : le nouveau triptyque",
-    "text": "L’IPO d’Anthropic et la crise chez Nvidia révèlent une tension fondamentale : forte concentration des capacités de calcul, fragilité réglementaire et besoin urgent de résilience industrielle. Les politiques publiques vont devoir jouer sur trois leviers simultanés — régulation des marchés de capitaux IA, contrôle d’exportations ciblé et investissement public‑privé pour remonter la filière (semi‑conducteurs, data centers, BITD). Sans arbitrage clair, l’écosystème risque d’osciller entre bulle spéculative et frein stratégique."
+    "title": "Puces, pouvoirs et gouvernance : trois courses croisées",
+    "text": "Les annonces récentes (contrôles d’export US, resserrement de TSMC, trimestre record de NVIDIA) tracent une géopolitique industrielle où l’accès au compute devient déterminant. Les États cherchent à fragmenter l’écosystème alors que les acteurs privés maximisent l’échelle. Résultat : double pression sur les chaînes d’approvisionnement (souveraineté et coûts) et sur la gouvernance internationale de l’IA. Priorité stratégique : combiner résilience industrielle, contrôles ciblés et mécanismes multilatéraux de vérification technique."
   },
   "news": [
     {
-      "title": "Anthropic : IPO record à 81,3 Md$",
-      "category": "technologie / marchés",
-      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
+      "title": "États‑Unis durcissent contrôles sur puces AI",
+      "category": "Géopolitique / Industrie",
+      "url": "https://live.euronext.com/en/financial-news/us-curb-chinas-access-ai-chips-trump-heads-asia"
     },
     {
-      "title": "Nvidia : démission de Jensen Huang",
-      "category": "IA / industrie",
-      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition?ftag=YHF4eb9d17"
+      "title": "TSMC restreint livraisons pour designers chinois",
+      "category": "Supply chain / Technologie",
+      "url": "https://ca.investing.com/news/stock-market-news/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say-4969601"
     },
     {
-      "title": "US : règle fermant la faille d'accès distant",
-      "category": "géopolitique / sécurité industrielle",
-      "url": "https://www.washingtonpost.com/technology/2026/11/16/trump-officials-issue-rule-restrict-sales-ai-chips-china/"
+      "title": "NVIDIA : trimestre record mais risques",
+      "category": "Technologie / Marchés",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001045810/46a9c98c-87ae-40f5-acac-7d9264b18eb4.pdf"
     }
   ],
   "readings": [
     {
-      "title": "The Global Economy Looks Vulnerable to an AI",
-      "source": "Wall Street Journal",
-      "url": "https://stocks.apple.com/ApNQ8CDaxR8OSAIBEI4STjQ"
+      "title": "The Year Math Changed Forever",
+      "source": "The New Yorker",
+      "url": "https://www.newyorker.com/magazine/2026/11/09/the-year-math-changed-forever"
     },
     {
-      "title": "Instead of Taking Your Job, A.I. Might Transform",
+      "title": "Is A.I. Above the Law?",
       "source": "The New Yorker",
-      "url": "https://www.newyorker.com/culture/open-questions/instead-of-taking-your-job-ai-might-transform-it"
+      "url": "https://www.newyorker.com/magazine/2026/09/28/is-ai-above-the-law"
     }
   ],
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "edition": "THE SIGNAL"
 }
