@@ -1,111 +1,125 @@
 {
   "critical": [
     {
-      "title": "Anthropic raises $81bn in record IPO",
+      "title": "Nvidia réinstaure Jensen Huang",
       "category": "technologie / marchés",
-      "summary": "Anthropic a fixé le prix de son IPO à 83 $ l’action (18 nov. 2026) et a levé environ 81,3 milliards $, la plus grosse introduction en Bourse jamais réalisée. L’entreprise a commencé à être cotée le 19 nov.; l’opération redéfinit l’échelle du financement public pour les « frontier AI » et repositionne la valorisation du secteur, avec des impacts directs sur la demande de puces, cloud et engagements d’infrastructure.",
-      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
+      "summary": "Le conseil d’administration de Nvidia a réintégré Jensen Huang comme président et CEO le 23 novembre 2026, après une période de démission liée à des révélations personnelles et des enquêtes sur des flux de puces. La décision a ravivé le marché de l’IA et relance le débat sur gouvernance d’entreprise, contrôle des exportations et influence politique aux États-Unis. Source officielle et retombées marché immédiates.",
+      "url": "https://apnews.com/article/nvidia-jensen-huang-39d4b34ffaa867b4e669893b5fd5028f"
     },
     {
-      "title": "EU Commission hit by AI-assisted cyberattack",
+      "title": "TSMC suspend des livraisons vers la Chine",
+      "category": "industrie / supply chain",
+      "summary": "Le 19 novembre 2026, le Financial Times rapporte que TSMC (et Samsung) a suspendu certaines livraisons à des clients chinois après l’entrée en vigueur d’une règle de la BIS (19.11.2026) qui ferme une voie de contournement pour l’accès aux puces avancées. Impact direct : retards de production pour des fabricants chinois et nouveau goulot d’étranglement dans la chaîne d’approvisionnement mondiale des semiconducteurs.",
+      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74"
+    },
+    {
+      "title": "Commission européenne : attaque liée à l’IA",
       "category": "cybersécurité / renseignement",
-      "summary": "La Commission européenne a confirmé (19 nov. 2026) qu’une campagne détectée le 22 oct. avait été conduite à l’aide d’un outil d’IA public; plusieurs applications internes (RH, remboursements, traduction) ont été temporairement mises hors ligne. CERT‑EU et enquêtes associées citent l’outil ARTEX; l’incident illustre la rapidité d’automatisation des intrusions et pose un challenge direct aux régulateurs qui rédigent les règles sur l’IA.",
-      "url": "https://www.politico.eu/newsletter/brussels-playbook/cyberattack-hits-the-commission/"
-    },
-    {
-      "title": "France orders 50,000 155mm shells from KNDS",
-      "category": "défense / industrie",
-      "summary": "La DGA a notifié le 20 nov. 2026 une commande ferme de 50 000 obus de 155 mm à KNDS, assortie d’un investissement public-privé pour tripler la capacité du site de La Chapelle‑Saint‑Ursin d’ici 2029. C’est un signal clair de renforcement de la BITD française et européenne face aux tensions et aux besoins de reconstitution d’approvisionnement en munitions, avec conséquences sur sous-traitance, recrutement et calendrier des livraisons.",
-      "url": "https://www.eqs-news.com/company/knds-n-v/news/9256d00b-95bc-421c-b13e-686515f402c0"
+      "summary": "La Commission européenne a confirmé des incidents détectés depuis le 22 octobre et a prévenu le 23 novembre 2026 d’un possible accès et fuite de données via une attaque exploitant des outils/techniques d’IA (ARTEX évoqué par des sources). Plusieurs applications internes ont été temporairement retirées; l’événement pose la question de la robustesse des services publics face aux agents automatiques. Surveillance des conséquences pour données RH et services internes.",
+      "url": "https://apnews.com/article/european-commission-cyberattack-website-artex-ai-02e1f69e46ad9f82484b66b2f86df53b"
     }
   ],
   "radar": [
     {
-      "title": "Bell Canada reports 'agentic' data theft",
-      "category": "cybersécurité / télécoms",
-      "summary": "Fait (20 nov. 2026) : Bell Canada a confirmé qu’un « agentic threat actor » avait accédé le 17 nov. à plusieurs systèmes, dont un environnement pré‑production Maximo utilisé pour commander et provisionner des circuits, et avait exfiltré des données clients entreprise (contacts, titres, emails, numéros, quelques IP). Contexte : l’alerte arrive après la diffusion d’outils agentifs (ARTEX) et souligne le risque concret pour les opérateurs télécom et leurs clients B2B. Le signal : s’attendre à des campagnes d’hameçonnage ciblées et à une montée des exigences de traçabilité/IOCs partagés par les opérateurs.",
-      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"
+      "title": "Fury in Congress over Huang's return",
+      "category": "politique / régulation",
+      "summary": "Fait (23‑24 Nov 2026) : des commissions du Congrès américain ont annoncé auditions et enquêtes après la réintégration de Jensen Huang, demandant transparence sur les « entrées » gouvernementales évoquées par le conseil. Contexte : l’affaire s’inscrit au cœur du débat sur les exportations de puces vers la Chine et la sécurité nationale. Signal : risque élevé de nouvelles contraintes réglementaires et d’auditions publiques susceptibles d’influer sur les règles d’export et la gouvernance des groupes stratégiques.",
+      "url": "https://apnews.com/article/nvidia-jensen-huang-48a005a1415549e69ec69400024aa797"
     },
     {
-      "title": "FBI issues FLASH on ARTEX agentic framework",
-      "category": "cybersécurité / menaces",
-      "summary": "Fait (13 nov. 2026) : le FBI a publié un FLASH (FLASH‑20261113‑001) décrivant ARTEX, un framework agentif open‑source utilisé depuis août 2026 pour automatiser des intrusions « à vitesse machine »; le document détaille TTPs, IOCs et note plus de 1 600 consoles exposées début novembre. Contexte : l’alerte précède et éclaire plusieurs incidents publics (institutions, banques, prestataires). Le signal : accélération des attaques multi‑cibles et nécessité immédiate d’actions de durcissement sur portails exposés, IAM et chaînes fournisseurs.",
-      "url": "https://www.ic3.gov/CSA/2026/261113.pdf"
+      "title": "Equinor : cyberattaque détectée puis stoppée",
+      "category": "cybersécurité / énergie",
+      "summary": "Fait vérifié : Equinor a détecté une cyberattaque le 17 novembre 2026 et annoncé l’avoir stoppée le 20 novembre; les opérations gazières sont restées inchangées. Contexte : incident parmi une série d’attaques récentes contre des infrastructures critiques en Europe. Signal : même quand la production est préservée, les attaques sur systèmes IT internes (emails, applis RH) montrent la fragilité opérationnelle des grands fournisseurs d’énergie et obligeront à rehausser contrôles tiers et résilience IT.",
+      "url": "https://www.equinor.com/news/20261711-equinor-detected-cyber-attack"
+    },
+    {
+      "title": "BIS IFR (19 Nov) : fermeture d’une voie de contournement",
+      "category": "régulation / chaînes industrielles",
+      "summary": "Fait (19.11.2026) : la Bureau of Industry and Security (Commerce US) a publié une Interim Final Rule interdisant le contournement par packaging/test tiers pour certains circuits avancés, prise d’effet immédiate. Contexte : règle qui a poussé TSMC et Samsung à suspendre certains envois vers la Chine. Signal : normalisation de contrôles plus stricts sur la production et le transit des semiconducteurs, tensions accrues pour fabricants de smartphones et fournisseurs asiatiques à court terme.",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors"
     }
   ],
   "intelligence": [
     {
-      "title": "France awards IRIS satellites to Airbus/Thales",
-      "category": "renseignement / industrie spatiale",
-      "summary": "Fait (9 nov. 2026) : la DGA a notifié un contrat de plus de 1,5 Md€ pour deux satellites d’observation optique (programme IRIS) au groupement Airbus Defence & Space – Thales Alenia Space, couvrant plateformes, charge utile, segment sol et opérations en orbite. Contexte : IRIS remplace la composante optique précédente et sécurise l’autonomie française en IMINT jusqu’aux années 2030. Signal stratégique : renforcement de la souveraineté d’observation, consolidation de la BITD spatiale européenne et file d’approvisionnement critique pour capteurs optiques haute résolution.",
-      "url": "https://www.airbus.com/en/newsroom/press-releases/2026-11-airbus-to-deliver-iris-frances-next-generation-military-earth-observation-satellites"
+      "title": "The CIA's transformation under Trump and Ratcliffe",
+      "category": "renseignement / opérations",
+      "summary": "Deep dive (Intelligence Online, séries 10–12 Nov 2026) : sous John Ratcliffe, la CIA privilégierait désormais les opérations offensives et le soutien en Ukraine et Amérique latine, au détriment de l’analyse traditionnelle. Contexte : changement doctrinal avec implications pour coopération alliée, contrôle parlementaire et recours accru à des prestataires privés. Signal stratégique : redéfinition des priorités opérationnelles US pouvant modifier l’équilibre des risques et réactions internationales.",
+      "url": "https://www.intelligenceonline.com/deepdive/the-cia-transformation-under-trump-and-ratcliffe"
     }
   ],
   "data_points": [
     {
-      "label": "Commande DGA à KNDS (20 Nov 2026, obus 155 mm)",
-      "value": "50,000",
-      "context": "Commande ferme de 50 000 obus 155 mm, livraisons prévues en 2029–2030; État et KNDS investissent pour tripler l’usine de La Chapelle‑Saint‑Ursin.",
-      "comparison": "Capacité prévue augmentée de 60 000/an à 150 000/an d’ici 2029 (plan industriel KNDS/DGA).",
-      "stakes": "Mesure concrète de reconstitution des stocks et de souveraineté industrielle; réduit la dépendance aux imports et accélère recrutement/modernisation d’atelier.",
-      "url": "https://www.eqs-news.com/company/knds-n-v/news/9256d00b-95bc-421c-b13e-686515f402c0"
+      "label": "BIS approvals snapshot (11 May 2026) – HFAC release 19 Nov 2026",
+      "value": "879,868",
+      "context": "Nombre d’ICs H200/MI325X approuvés par BIS pour entreprises liées à la RPC, tableau BIS daté 11/05/2026 (publié par HFAC le 19/11/2026).",
+      "comparison": "Demandes totales enregistrées = 3,444,160 puces (applications cumulées) ; approvals 879,868 (soit ~25.5% des demandes) — données HFAC/BIS, snapshot 11/05/2026.",
+      "stakes": "Montre l’échelle des licences validées avant expédition et alimente le débat sur le risque de détournement et la nécessité d’un contrôle opérationnel renforcé.",
+      "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-brian-mast-exercises-legislative-authority-to-publicly-release-ai-chip-license-information-for-china"
     },
     {
-      "label": "Anthropic IPO proceeds (18–19 Nov 2026)",
-      "value": "81.3 B$",
-      "context": "Anthropic a prix son IPO à 83 $/action et a levé ~81,3 milliards $, début de cotation le 19 nov. 2026 (ticker ANT).",
-      "comparison": "Dépasse l’offre initiale de SpaceX (≈75 B$ levés en juin 2026) comme record de produit d’introduction.",
-      "stakes": "Redistribution massive des capitaux vers l’écosystème 'frontier AI' : pression sur capacités cloud, chaîne de semiconducteurs et contrats d’infrastructure énergétique/IT.",
-      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
+      "label": "Mouvement action Nvidia (23 Nov 2026)",
+      "value": "+31%",
+      "context": "Rallye intrajournalier/close du titre NVDA le 23/11/2026 après l’annonce de la réintégration de Jensen Huang par le conseil d’administration.",
+      "comparison": "Avant la réintégration, l’action avait chuté d’environ 33% depuis le 9 novembre 2026 ; le rebond du 23/11 a repris une large part des pertes récentes (AP).",
+      "stakes": "Illustre la sensibilité extrême du marché aux risques de gouvernance dans les firmes de technologie stratégique et l’effet immédiat sur la valorisation du secteur IA.",
+      "url": "https://apnews.com/article/nvidia-jensen-huang-chips-return-trump-china-01ba8c83e7d7d4fa79c22ca5dbc47d22"
+    },
+    {
+      "label": "Part du chiffre d’affaires TSMC provenant de Chine (T3 2026)",
+      "value": "5%",
+      "context": "Part estimée des revenus de TSMC liée à des clients basés en Chine, trimestre Q3 2026 (élément cité dans reportages FT autour des suspensions de livraisons).",
+      "comparison": "≈5% au T3 2026 contre ≈8% un an plus tôt (Q3 2025) selon le même reportage FT ; baisse structurelle de l’exposition Chine en pourcentage.",
+      "stakes": "Signale que l’impact commercial direct pour TSMC reste limité en % de CA, mais les suspensions ciblées peuvent créer des frictions sectorielles et des délais chez des clients chinois-clés.",
+      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74"
     }
   ],
   "reading_room": [
     {
-      "title": "Anthropic live: record IPO",
-      "source": "Financial Times",
-      "why_read": "Analyse de fond du déroulé de l’IPO, des engagements d’infrastructure et des risques financiers associés à la valorisation; utile pour comprendre l’impact macro‑sectoriel sur cloud, puces et financement des data centers.",
-      "url": "https://www.ft.com/content/ (search FT 19 Nov 2026 Anthropic live)"
+      "title": "Trump and Ratcliffe’s CIA",
+      "source": "Intelligence Online (Deep Dive)",
+      "why_read": "Enquête en plusieurs volets (novembre 2026) sur l’évolution doctrinale de la CIA : priorisation des opérations, coopération avec Kyiv et conséquences pour la supervision parlementaire. Lecture essentielle pour comprendre les nouvelles lignes d’action clandestines et leurs effets sur la conduite des conflits et l’accès aux technologies sensibles.",
+      "url": "https://www.intelligenceonline.com/deepdive/the-cia-transformation-under-trump-and-ratcliffe"
     },
     {
-      "title": "Quel C2 pour l’armée française à l’ère de l’IA ?",
+      "title": "Du fil de l’épée au fil du réseau",
       "source": "OpexNews",
-      "why_read": "Reportage technique récent (Nov. 2026) sur l’évolution des architectures C2 et des hubs de donnée embarqués : lecture essentielle pour comprendre les choix matériels, l’interopérabilité et les besoins BITD face à l’IA sur théâtre.",
+      "why_read": "Analyse française (12 nov. 2026) des défis de commandement (C2) à l’ère du réseau et de l’IA : interopérabilité, dépendances industrielles et souveraineté numérique de la BITD. Utile pour décideurs défense et responsables BITD souhaitant saisir les arbitrages entre efficacité opérationnelle et sécurité industrielle.",
       "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
     }
   ],
   "editorial": {
-    "title": "IA : boom financier, menace opérationnelle",
-    "text": "Les événements de la semaine — l’IPO record d’Anthropic, la confirmation d’une cyber‑campagne basée sur un outil agentif et les commandes de munitions/satellites — montrent une bifurcation : d’un côté, une injection massive de capitaux qui accélère l’industrialisation de l’IA ; de l’autre, la militarisation et la vulnérabilité accrue des infrastructures. Les décideurs publics et industriels doivent combiner protection active (durcissement, partage d’IOCs) et investissements souverains ciblés pour réduire la fragilité stratégique."
+    "title": "Gouvernance, chips et résilience : le trio destabilisateur",
+    "text": "La réintégration de Jensen Huang, l’accélération des contrôles d’export et les attaques IT récentes forment un triptyque inquiétant : fragilité des chaînes d’approvisionnement, pression politique sur les firmes stratégiques et exposition opérationnelle des infrastructures. Les décideurs publics et industriels doivent synchroniser gouvernance d’entreprise, contrôles d’export calibrés et renforcement rapide de la résilience cyber‑opérationnelle pour éviter qu’un choc combiné ne réinitialise l’écosystème technologique mondial."
   },
   "news": [
     {
-      "title": "Anthropic raises $81bn in record IPO",
+      "title": "Nvidia réinstaure Jensen Huang",
       "category": "technologie / marchés",
-      "url": "https://apnews.com/article/70b660ddf900d90bbf484ecdf1fb441c"
+      "url": "https://apnews.com/article/nvidia-jensen-huang-39d4b34ffaa867b4e669893b5fd5028f"
     },
     {
-      "title": "EU Commission hit by AI-assisted cyberattack",
+      "title": "TSMC suspend des livraisons vers la Chine",
+      "category": "industrie / supply chain",
+      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74"
+    },
+    {
+      "title": "Commission européenne : attaque liée à l’IA",
       "category": "cybersécurité / renseignement",
-      "url": "https://www.politico.eu/newsletter/brussels-playbook/cyberattack-hits-the-commission/"
-    },
-    {
-      "title": "France orders 50,000 155mm shells from KNDS",
-      "category": "défense / industrie",
-      "url": "https://www.eqs-news.com/company/knds-n-v/news/9256d00b-95bc-421c-b13e-686515f402c0"
+      "url": "https://apnews.com/article/european-commission-cyberattack-website-artex-ai-02e1f69e46ad9f82484b66b2f86df53b"
     }
   ],
   "readings": [
     {
-      "title": "Anthropic live: record IPO",
-      "source": "Financial Times",
-      "url": "https://www.ft.com/content/ (search FT 19 Nov 2026 Anthropic live)"
+      "title": "Trump and Ratcliffe’s CIA",
+      "source": "Intelligence Online (Deep Dive)",
+      "url": "https://www.intelligenceonline.com/deepdive/the-cia-transformation-under-trump-and-ratcliffe"
     },
     {
-      "title": "Quel C2 pour l’armée française à l’ère de l’IA ?",
+      "title": "Du fil de l’épée au fil du réseau",
       "source": "OpexNews",
       "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
     }
   ],
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "edition": "THE SIGNAL"
 }
