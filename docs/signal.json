@@ -1,125 +1,87 @@
 {
   "critical": [
     {
-      "title": "Nvidia réinstaure Jensen Huang",
-      "category": "technologie / marchés",
-      "summary": "Le conseil d’administration de Nvidia a réintégré Jensen Huang comme président et CEO le 23 novembre 2026, après une période de démission liée à des révélations personnelles et des enquêtes sur des flux de puces. La décision a ravivé le marché de l’IA et relance le débat sur gouvernance d’entreprise, contrôle des exportations et influence politique aux États-Unis. Source officielle et retombées marché immédiates.",
-      "url": "https://apnews.com/article/nvidia-jensen-huang-39d4b34ffaa867b4e669893b5fd5028f"
+      "title": "États‑Unis propose droits de douane sur 14 pays",
+      "category": "macro/marchés",
+      "summary": "Le 25 novembre 2026 l’administration américaine (USTR) a proposé des droits antidumping/surcapacité visant 14 partenaires majeurs, incluant la Chine (taux jusqu’à 20 %) et l’UE/Japon/Corée (plafond annoncé 15 %). Mesure fondée sur une enquête Section 301 de huit mois — impact direct sur chaînes d’approvisionnement, hausse des coûts industriels et risque de réponse commerciale des partenaires.",
+      "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
     },
     {
-      "title": "TSMC suspend des livraisons vers la Chine",
-      "category": "industrie / supply chain",
-      "summary": "Le 19 novembre 2026, le Financial Times rapporte que TSMC (et Samsung) a suspendu certaines livraisons à des clients chinois après l’entrée en vigueur d’une règle de la BIS (19.11.2026) qui ferme une voie de contournement pour l’accès aux puces avancées. Impact direct : retards de production pour des fabricants chinois et nouveau goulot d’étranglement dans la chaîne d’approvisionnement mondiale des semiconducteurs.",
-      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74"
+      "title": "Repli global des marchés après vagues tarifaires",
+      "category": "macro/marchés",
+      "summary": "Les places financières ont reculé les 24–25 novembre 2026 après la réapparition d’un mouvement tarifaire américain et la baisse des valeurs liées à l’IA : les investisseurs réévaluent le coût de la construction d’infrastructures AI et le risque de baisse du commerce mondial. Signal : moindre appétit pour titres d’infrastructure AI et hausse de la prime de risque sur chaînes industrielles exposées aux exportations.",
+      "url": "https://www.investing.com/news/stock-market-news/european-shares-rise-on-consumer-boost-markets-await-us-tariffs-inflation-5049970"
     },
     {
-      "title": "Commission européenne : attaque liée à l’IA",
-      "category": "cybersécurité / renseignement",
-      "summary": "La Commission européenne a confirmé des incidents détectés depuis le 22 octobre et a prévenu le 23 novembre 2026 d’un possible accès et fuite de données via une attaque exploitant des outils/techniques d’IA (ARTEX évoqué par des sources). Plusieurs applications internes ont été temporairement retirées; l’événement pose la question de la robustesse des services publics face aux agents automatiques. Surveillance des conséquences pour données RH et services internes.",
-      "url": "https://apnews.com/article/european-commission-cyberattack-website-artex-ai-02e1f69e46ad9f82484b66b2f86df53b"
+      "title": "DGA commande 50 000 obus à KNDS Ammo France",
+      "category": "défense / industrie",
+      "summary": "Le 12 novembre 2026 la DGA a formalisé une double commande et un auto‑investissement équivalent pour KNDS Ammo France : 50 000 obus de 155 mm commandés (livraisons 2029–2030) et montée en cadence du site de La Chapelle‑Saint‑Ursin vers 150 000 obus/an d’ici 2029. Cela renforce la souveraineté française en munitions et modifie les priorités de la BITD européenne.",
+      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
     }
   ],
-  "radar": [
-    {
-      "title": "Fury in Congress over Huang's return",
-      "category": "politique / régulation",
-      "summary": "Fait (23‑24 Nov 2026) : des commissions du Congrès américain ont annoncé auditions et enquêtes après la réintégration de Jensen Huang, demandant transparence sur les « entrées » gouvernementales évoquées par le conseil. Contexte : l’affaire s’inscrit au cœur du débat sur les exportations de puces vers la Chine et la sécurité nationale. Signal : risque élevé de nouvelles contraintes réglementaires et d’auditions publiques susceptibles d’influer sur les règles d’export et la gouvernance des groupes stratégiques.",
-      "url": "https://apnews.com/article/nvidia-jensen-huang-48a005a1415549e69ec69400024aa797"
-    },
-    {
-      "title": "Equinor : cyberattaque détectée puis stoppée",
-      "category": "cybersécurité / énergie",
-      "summary": "Fait vérifié : Equinor a détecté une cyberattaque le 17 novembre 2026 et annoncé l’avoir stoppée le 20 novembre; les opérations gazières sont restées inchangées. Contexte : incident parmi une série d’attaques récentes contre des infrastructures critiques en Europe. Signal : même quand la production est préservée, les attaques sur systèmes IT internes (emails, applis RH) montrent la fragilité opérationnelle des grands fournisseurs d’énergie et obligeront à rehausser contrôles tiers et résilience IT.",
-      "url": "https://www.equinor.com/news/20261711-equinor-detected-cyber-attack"
-    },
-    {
-      "title": "BIS IFR (19 Nov) : fermeture d’une voie de contournement",
-      "category": "régulation / chaînes industrielles",
-      "summary": "Fait (19.11.2026) : la Bureau of Industry and Security (Commerce US) a publié une Interim Final Rule interdisant le contournement par packaging/test tiers pour certains circuits avancés, prise d’effet immédiate. Contexte : règle qui a poussé TSMC et Samsung à suspendre certains envois vers la Chine. Signal : normalisation de contrôles plus stricts sur la production et le transit des semiconducteurs, tensions accrues pour fabricants de smartphones et fournisseurs asiatiques à court terme.",
-      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors"
-    }
-  ],
+  "radar": [],
   "intelligence": [
     {
-      "title": "The CIA's transformation under Trump and Ratcliffe",
-      "category": "renseignement / opérations",
-      "summary": "Deep dive (Intelligence Online, séries 10–12 Nov 2026) : sous John Ratcliffe, la CIA privilégierait désormais les opérations offensives et le soutien en Ukraine et Amérique latine, au détriment de l’analyse traditionnelle. Contexte : changement doctrinal avec implications pour coopération alliée, contrôle parlementaire et recours accru à des prestataires privés. Signal stratégique : redéfinition des priorités opérationnelles US pouvant modifier l’équilibre des risques et réactions internationales.",
-      "url": "https://www.intelligenceonline.com/deepdive/the-cia-transformation-under-trump-and-ratcliffe"
+      "title": "Paris attribue la cyberattaque des supermarchés à l'Iran",
+      "category": "renseignement / cybersécurité",
+      "summary": "Le 9 novembre 2026 le ministère des Affaires étrangères et le C4 (ANSSI, DGSE, DGSI, DGA, commandement cyber) ont rendu publique l’imputation d’une campagne visant des contrôleurs de réfrigération (~700 sites) à une unité cyber‑offensive liée au Corps des Gardiens de la Révolution islamique (Shahid Kaveh). Conséquence : pression diplomatique et proposition de sanctions européennes, et nécessité urgente de renforcement de la chaîne logistique froide.",
+      "url": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/declaration-d-attribution-a-l-iran-de-cyber-attaques-visant-la-france"
     }
   ],
   "data_points": [
     {
-      "label": "BIS approvals snapshot (11 May 2026) – HFAC release 19 Nov 2026",
-      "value": "879,868",
-      "context": "Nombre d’ICs H200/MI325X approuvés par BIS pour entreprises liées à la RPC, tableau BIS daté 11/05/2026 (publié par HFAC le 19/11/2026).",
-      "comparison": "Demandes totales enregistrées = 3,444,160 puces (applications cumulées) ; approvals 879,868 (soit ~25.5% des demandes) — données HFAC/BIS, snapshot 11/05/2026.",
-      "stakes": "Montre l’échelle des licences validées avant expédition et alimente le débat sur le risque de détournement et la nécessité d’un contrôle opérationnel renforcé.",
-      "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-brian-mast-exercises-legislative-authority-to-publicly-release-ai-chip-license-information-for-china"
+      "label": "DGA — commande obus 50 000 (12 nov 2026)",
+      "value": "50 000",
+      "context": "Commande confirmée par la DGA à KNDS Ammo France ; livraisons prévues 2029–2030 sur site La Chapelle‑Saint‑Ursin.",
+      "comparison": "50 000 vs capacité annuelle 60 000 (capacité 2025) — commande égale 83 % de la production annuelle 2025.",
+      "stakes": "Assure visibilité industrielle et stocks, mais met la pression sur la montée en cadence et les fournisseurs de composants critiques.",
+      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
     },
     {
-      "label": "Mouvement action Nvidia (23 Nov 2026)",
-      "value": "+31%",
-      "context": "Rallye intrajournalier/close du titre NVDA le 23/11/2026 après l’annonce de la réintégration de Jensen Huang par le conseil d’administration.",
-      "comparison": "Avant la réintégration, l’action avait chuté d’environ 33% depuis le 9 novembre 2026 ; le rebond du 23/11 a repris une large part des pertes récentes (AP).",
-      "stakes": "Illustre la sensibilité extrême du marché aux risques de gouvernance dans les firmes de technologie stratégique et l’effet immédiat sur la valorisation du secteur IA.",
-      "url": "https://apnews.com/article/nvidia-jensen-huang-chips-return-trump-china-01ba8c83e7d7d4fa79c22ca5dbc47d22"
-    },
-    {
-      "label": "Part du chiffre d’affaires TSMC provenant de Chine (T3 2026)",
-      "value": "5%",
-      "context": "Part estimée des revenus de TSMC liée à des clients basés en Chine, trimestre Q3 2026 (élément cité dans reportages FT autour des suspensions de livraisons).",
-      "comparison": "≈5% au T3 2026 contre ≈8% un an plus tôt (Q3 2025) selon le même reportage FT ; baisse structurelle de l’exposition Chine en pourcentage.",
-      "stakes": "Signale que l’impact commercial direct pour TSMC reste limité en % de CA, mais les suspensions ciblées peuvent créer des frictions sectorielles et des délais chez des clients chinois-clés.",
-      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74"
+      "label": "Taux proposé USTR sur la Chine (25 nov 2026)",
+      "value": "20 %",
+      "context": "USTR a proposé, le 25 novembre 2026, des droits visant la Chine dans le cadre d’une enquête Section 301 sur la 'surcapacité industrielle'.",
+      "comparison": "20 % proposé pour la Chine vs plafonds de 15 % annoncés pour l’UE/Japon/Corée/Taiwan dans la même proposition USTR.",
+      "stakes": "Un taux ciblé sur la Chine augmente les coûts pour fabricants intégrés aux chaînes d'approvisionnement asiatiques et peut déclencher rétorsions commerciales et renégociations d’approvisionnements industriels.",
+      "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
     }
   ],
   "reading_room": [
     {
-      "title": "Trump and Ratcliffe’s CIA",
-      "source": "Intelligence Online (Deep Dive)",
-      "why_read": "Enquête en plusieurs volets (novembre 2026) sur l’évolution doctrinale de la CIA : priorisation des opérations, coopération avec Kyiv et conséquences pour la supervision parlementaire. Lecture essentielle pour comprendre les nouvelles lignes d’action clandestines et leurs effets sur la conduite des conflits et l’accès aux technologies sensibles.",
-      "url": "https://www.intelligenceonline.com/deepdive/the-cia-transformation-under-trump-and-ratcliffe"
-    },
-    {
-      "title": "Du fil de l’épée au fil du réseau",
+      "title": "Delair, la pépite toulousaine devenue le Toyota du drone",
       "source": "OpexNews",
-      "why_read": "Analyse française (12 nov. 2026) des défis de commandement (C2) à l’ère du réseau et de l’IA : interopérabilité, dépendances industrielles et souveraineté numérique de la BITD. Utile pour décideurs défense et responsables BITD souhaitant saisir les arbitrages entre efficacité opérationnelle et sécurité industrielle.",
-      "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
+      "why_read": "Enquête longue (OpexNews) sur la montée en puissance industrielle française des drones Delair : stratégie d’industrialisation, transferts technologiques, lignes de production pour munitions et drones tactiques. Lecture essentielle pour comprendre comment une PME européenne structure une chaîne industrielle scalable utile aux armées et au marché civil.",
+      "url": "https://opexnews.fr/delair-toyota-drone-toulouse-reussite-aspik/"
     }
   ],
   "editorial": {
-    "title": "Gouvernance, chips et résilience : le trio destabilisateur",
-    "text": "La réintégration de Jensen Huang, l’accélération des contrôles d’export et les attaques IT récentes forment un triptyque inquiétant : fragilité des chaînes d’approvisionnement, pression politique sur les firmes stratégiques et exposition opérationnelle des infrastructures. Les décideurs publics et industriels doivent synchroniser gouvernance d’entreprise, contrôles d’export calibrés et renforcement rapide de la résilience cyber‑opérationnelle pour éviter qu’un choc combiné ne réinitialise l’écosystème technologique mondial."
+    "title": "Souveraineté industrielle et choc tarifaire: deux fronts liés",
+    "text": "La double tempête — relance des tarifs américains et accélération des capacités industrielles de défense en Europe — oblige entreprises et décideurs à concilier résilience et compétitivité. Les chaînes d’approvisionnement doivent être reconfigurées : diversification fournisseurs, relocalisations ciblées et priorisation des composants critiques. Pour les dirigeants, la priorité opérationnelle est claire : plan de continuité logistique à 18–36 mois et dialogue industriel public‑privé immédiat."
   },
   "news": [
     {
-      "title": "Nvidia réinstaure Jensen Huang",
-      "category": "technologie / marchés",
-      "url": "https://apnews.com/article/nvidia-jensen-huang-39d4b34ffaa867b4e669893b5fd5028f"
+      "title": "États‑Unis propose droits de douane sur 14 pays",
+      "category": "macro/marchés",
+      "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
     },
     {
-      "title": "TSMC suspend des livraisons vers la Chine",
-      "category": "industrie / supply chain",
-      "url": "https://www.ft.com/content/d42dd235-7b0e-4651-a8d2-f7b7b4963a74"
+      "title": "Repli global des marchés après vagues tarifaires",
+      "category": "macro/marchés",
+      "url": "https://www.investing.com/news/stock-market-news/european-shares-rise-on-consumer-boost-markets-await-us-tariffs-inflation-5049970"
     },
     {
-      "title": "Commission européenne : attaque liée à l’IA",
-      "category": "cybersécurité / renseignement",
-      "url": "https://apnews.com/article/european-commission-cyberattack-website-artex-ai-02e1f69e46ad9f82484b66b2f86df53b"
+      "title": "DGA commande 50 000 obus à KNDS Ammo France",
+      "category": "défense / industrie",
+      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
     }
   ],
   "readings": [
     {
-      "title": "Trump and Ratcliffe’s CIA",
-      "source": "Intelligence Online (Deep Dive)",
-      "url": "https://www.intelligenceonline.com/deepdive/the-cia-transformation-under-trump-and-ratcliffe"
-    },
-    {
-      "title": "Du fil de l’épée au fil du réseau",
+      "title": "Delair, la pépite toulousaine devenue le Toyota",
       "source": "OpexNews",
-      "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
+      "url": "https://opexnews.fr/delair-toyota-drone-toulouse-reussite-aspik/"
     }
   ],
-  "date": "2026-11-24",
+  "date": "2026-11-26",
   "edition": "THE SIGNAL"
 }
