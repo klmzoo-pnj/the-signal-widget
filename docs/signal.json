@@ -1,87 +1,139 @@
 {
   "critical": [
     {
-      "title": "États‑Unis propose droits de douane sur 14 pays",
-      "category": "macro/marchés",
-      "summary": "Le 25 novembre 2026 l’administration américaine (USTR) a proposé des droits antidumping/surcapacité visant 14 partenaires majeurs, incluant la Chine (taux jusqu’à 20 %) et l’UE/Japon/Corée (plafond annoncé 15 %). Mesure fondée sur une enquête Section 301 de huit mois — impact direct sur chaînes d’approvisionnement, hausse des coûts industriels et risque de réponse commerciale des partenaires.",
-      "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
+      "title": "US met Megaspeed sur la liste d'entités",
+      "category": "géopolitique / export controls",
+      "summary": "Le Département du Commerce (BIS) a ajouté Megaspeed International et six entités liées à l'opérateur cloud à l'Entity List (règle finale déposée 23 nov., publiée 25 nov. 2026). Mesure contraignante: licences présumées refusées pour produits américains. Pourquoi ça compte: c'est la première utilisation récente de la liste pour fermer une voie de contournement d'exportation d'IA via centres de données en Asie du Sud‑Est, avec risque de rétorsions et d'impact sur chaînes d'approvisionnement de data centers.",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23999/additions-to-the-entity-list"
     },
     {
-      "title": "Repli global des marchés après vagues tarifaires",
-      "category": "macro/marchés",
-      "summary": "Les places financières ont reculé les 24–25 novembre 2026 après la réapparition d’un mouvement tarifaire américain et la baisse des valeurs liées à l’IA : les investisseurs réévaluent le coût de la construction d’infrastructures AI et le risque de baisse du commerce mondial. Signal : moindre appétit pour titres d’infrastructure AI et hausse de la prime de risque sur chaînes industrielles exposées aux exportations.",
-      "url": "https://www.investing.com/news/stock-market-news/european-shares-rise-on-consumer-boost-markets-await-us-tariffs-inflation-5049970"
+      "title": "Réintégration de Jensen Huang chez Nvidia",
+      "category": "marchés / gouvernance",
+      "summary": "Le conseil d'administration de Nvidia a réintégré Jen‑Hsun (Jensen) Huang comme président et CEO, annonce effective 23 nov. 2026; décision intervenue après interventions politiques de haut niveau. Pourquoi ça compte: le retour du fondateur a déclenché un bond massif des titres, mais pose un dilemme de gouvernance et de risque souverain — marchés, régulateurs et Washington doivent désormais concilier sécurité nationale, conformité export et stabilité industrielle.",
+      "url": "https://www.investing.com/news/economy-news/nvidia-reinstates-jensen-huang-as-ceo-igniting-tech-surge-5045917"
     },
     {
-      "title": "DGA commande 50 000 obus à KNDS Ammo France",
-      "category": "défense / industrie",
-      "summary": "Le 12 novembre 2026 la DGA a formalisé une double commande et un auto‑investissement équivalent pour KNDS Ammo France : 50 000 obus de 155 mm commandés (livraisons 2029–2030) et montée en cadence du site de La Chapelle‑Saint‑Ursin vers 150 000 obus/an d’ici 2029. Cela renforce la souveraineté française en munitions et modifie les priorités de la BITD européenne.",
-      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
+      "title": "FinCEN : systèmes coupés après cyberattaque",
+      "category": "cybersécurité / finance",
+      "summary": "FinCEN (Treasury) a annoncé une intrusion entraînant l'isolement de « certains systèmes » et a publié l'Ordre FIN‑2026‑R002 (24 nov. 2026) accordant des délais exceptionnels pour certains envois BSA/BOI jusqu'au 30 déc. 2026. Pourquoi ça compte: perturbe la chaîne de conformité AML/CTF, force les banques et fournisseurs à réajuster processus et échéances, et soulève questions opérationnelles sur la résilience des systèmes de renseignement financier.",
+      "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
     }
   ],
-  "radar": [],
+  "radar": [
+    {
+      "title": "Nvidia stoppe livraisons serveurs en Asie",
+      "category": "supply chain / export controls",
+      "summary": "Fait (26 nov. 2026) : le Financial Times, repris par Reuters, rapporte que Nvidia a demandé à ses assembleurs (Dell, Supermicro) de suspendre l’expédition de serveurs contenant ses puces vers la Malaisie, Singapour, la Thaïlande et l’Indonésie. Contexte : suit la règle BIS du 19 nov. ciblant l'accès à distance aux puces avancées. Le signal : attente de rétractation ou durcissement des contrôles peut bloquer projets datacenter et fragiliser financements d'infrastructures AI en Asie du Sud‑Est.",
+      "url": "https://www.reuters.com/technology/nvidia-halts-server-shipments-four-southeast-asian-countries-ft-2026-11-26/"
+    },
+    {
+      "title": "1Password : intrusion via compte GitHub",
+      "category": "cybersécurité / SaaS",
+      "summary": "Fait (25 nov. 2026) : 1Password indique qu’un attaquant a compromis un compte GitHub d’un employé (investigation ouverte depuis 19 nov.), a poussé du code malveillant et copié des données administratives d’un sous‑ensemble de clients (noms, e‑mails, identifiants, métadonnées). Contexte : l’incident n’a pas compromis les coffres chiffrés (vaults). Le signal : renforce l’attention sur la chaîne CI/CD, le risque fournisseur et l’urgence de durcir accès aux dépôts et aux tokens CI/CD.",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+    },
+    {
+      "title": "CISA ajoute 10 failles actives au KEV",
+      "category": "cybersécurité / vulnérabilités",
+      "summary": "Fait (25 nov. 2026) : CISA a ajouté dix vulnérabilités exploitées au catalogue Known Exploited Vulnerabilities — dont cinq failles Mitel MiCollab, des CVE sur Juniper Session Smart, Vates Xen Orchestra et des contrôleurs Danfoss. Contexte : ajout impose des délais de remédiation pour agences fédérales et clients critiques. Le signal : élargissement rapide du périmètre d’urgence opérationnelle, pression immédiate sur équipes IT et fournisseurs d'infrastructures industrielles et de communications.",
+      "url": "https://cvetodo.com/threat-report"
+    }
+  ],
   "intelligence": [
     {
-      "title": "Paris attribue la cyberattaque des supermarchés à l'Iran",
-      "category": "renseignement / cybersécurité",
-      "summary": "Le 9 novembre 2026 le ministère des Affaires étrangères et le C4 (ANSSI, DGSE, DGSI, DGA, commandement cyber) ont rendu publique l’imputation d’une campagne visant des contrôleurs de réfrigération (~700 sites) à une unité cyber‑offensive liée au Corps des Gardiens de la Révolution islamique (Shahid Kaveh). Conséquence : pression diplomatique et proposition de sanctions européennes, et nécessité urgente de renforcement de la chaîne logistique froide.",
-      "url": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/declaration-d-attribution-a-l-iran-de-cyber-attaques-visant-la-france"
+      "title": "Réseau OSINT du CIA/ODNI compromis",
+      "category": "renseignement / cyber",
+      "summary": "Fait (24 nov. 2026) : plusieurs médias (The New York Times, AP, CNN) rapportent qu’un système non classifié utilisé pour l’analyse d’OSINT par la CIA et l’ODNI a été compromis ; les agences indiquent qu’aucun système classifié n’a été touché et que l’incident est résolu. Contexte : s’inscrit dans une série d’incidents gouvernementaux récents. Le signal : exposé des capacités d’analyse open‑source et risque d’usage adversaire des métadonnées collectées ; à surveiller pour impacts sur méthode et sources d’analyse du renseignement.",
+      "url": "https://www.apnews.com/article/cia-cyberattack-unclassified-system-bfa6d3b02e3b0e2779dfb613c900bd77"
     }
   ],
   "data_points": [
     {
-      "label": "DGA — commande obus 50 000 (12 nov 2026)",
-      "value": "50 000",
-      "context": "Commande confirmée par la DGA à KNDS Ammo France ; livraisons prévues 2029–2030 sur site La Chapelle‑Saint‑Ursin.",
-      "comparison": "50 000 vs capacité annuelle 60 000 (capacité 2025) — commande égale 83 % de la production annuelle 2025.",
-      "stakes": "Assure visibilité industrielle et stocks, mais met la pression sur la montée en cadence et les fournisseurs de composants critiques.",
-      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
+      "label": "Commerce Dept. – Ajouts Entity List (23–25 nov 2026)",
+      "value": "7 entités",
+      "context": "Ajout de Megaspeed International et six entités affiliées (règle finale déposée 23 nov., publication FR 25 nov. 2026), prescriptions BIS sur licences d’export.",
+      "comparison": "vs 0 ajouts notés depuis octobre 2025 selon reportages Reuters (dernier placement comparable en oct. 2025).",
+      "stakes": "Bloque des vecteurs de contournement d’export (remote compute) et augmente le coût/risque pour opérateurs cloud et banques finançant datacenters en SEA.",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23999/additions-to-the-entity-list"
     },
     {
-      "label": "Taux proposé USTR sur la Chine (25 nov 2026)",
-      "value": "20 %",
-      "context": "USTR a proposé, le 25 novembre 2026, des droits visant la Chine dans le cadre d’une enquête Section 301 sur la 'surcapacité industrielle'.",
-      "comparison": "20 % proposé pour la Chine vs plafonds de 15 % annoncés pour l’UE/Japon/Corée/Taiwan dans la même proposition USTR.",
-      "stakes": "Un taux ciblé sur la Chine augmente les coûts pour fabricants intégrés aux chaînes d'approvisionnement asiatiques et peut déclencher rétorsions commerciales et renégociations d’approvisionnements industriels.",
-      "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
+      "label": "FinCEN – Ordre FIN‑2026‑R002 (24 nov. 2026)",
+      "value": "+42 j",
+      "context": "Relève les dépôts BSA/BOI prévus du 18 nov.–29 déc. 2026: échéance commune repoussée au 30 déc. 2026 (relief technique et opérations).",
+      "comparison": "vs aucune tolérance exceptionnelle avant l’ordre — le report maximum pour une échéance du 18 nov. est de 42 jours (18 nov. → 30 déc.).",
+      "stakes": "Resserre la gestion opérationnelle des banques et filières AML, retarde certains rapports utiles aux enquêtes et impose réallocation de capacités IT/compliance.",
+      "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
+    },
+    {
+      "label": "Réaction marché – Nvidia (23 nov. 2026)",
+      "value": "+31%",
+      "context": "Cours NVDA bondit d’environ +30–31% le 23 nov. 2026 à l’annonce de la réintégration de Jensen Huang comme CEO, entraînant un rebond des valeurs AI.",
+      "comparison": "vs S&P 500 +4,7% le même jour (effet macro‑tech/risque gouvernance contrasté).",
+      "stakes": "Montre la sensibilité extrême des marchés à la gouvernance des acteurs clés de l’écosystème IA; intensifie pressions politiques et régulatoires sur Nvidia et ses clients.",
+      "url": "https://www.investing.com/news/economy-news/nvidia-reinstates-jensen-huang-as-ceo-igniting-tech-surge-5045917"
+    },
+    {
+      "label": "CISA KEV – Nouveaux ajouts (25 nov. 2026)",
+      "value": "10 CVE",
+      "context": "CISA a inscrit dix vulnérabilités actives au catalogue KEV (5 Mitel MiCollab, Juniper Session Smart, Vates Xen Orchestra, 3 Danfoss), publication et obligations de remédiation fin nov. 2026.",
+      "comparison": "augmentation nette du catalogue (ex. total rapporté passé ~1,795 → ~1,805, soit +10 entrées ce jour).",
+      "stakes": "Oblige remédiation accélérée pour agences fédérales et opérateurs critiques; accentue risque opérationnel immédiat pour communications et OT/ICS.",
+      "url": "https://cvetodo.com/threat-report"
     }
   ],
   "reading_room": [
     {
-      "title": "Delair, la pépite toulousaine devenue le Toyota du drone",
-      "source": "OpexNews",
-      "why_read": "Enquête longue (OpexNews) sur la montée en puissance industrielle française des drones Delair : stratégie d’industrialisation, transferts technologiques, lignes de production pour munitions et drones tactiques. Lecture essentielle pour comprendre comment une PME européenne structure une chaîne industrielle scalable utile aux armées et au marché civil.",
-      "url": "https://opexnews.fr/delair-toyota-drone-toulouse-reussite-aspik/"
+      "title": "Quel C2 pour l’armée française à l’ère de l’IA ?",
+      "source": "OpexNews (12 nov. 2026)",
+      "why_read": "Analyse approfondie des enjeux de commandement (C2) dans les forces armées françaises face à l’adoption de l’IA : dépendances logicielles, souveraineté des chaînes et choix d’architectures. Utile pour comprendre risques BITD et contraintes d’intégration opérationnelle.",
+      "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
+    },
+    {
+      "title": "Update on Nov 2026 security incident",
+      "source": "1Password (25 nov. 2026)",
+      "why_read": "Note technique et chronologie officielle d’un incident CI/CD via compte GitHub compromis : quels métadonnées clients ont été copiées, mesures prises et implications pour la sécurité des chaînes de production logicielle. Lecture indispensable pour RSSI et DSI SaaS.",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+    },
+    {
+      "title": "BIS Issues New Rule Restricting Remote Access to Advanced Chips",
+      "source": "Milbank client alert (Nov 2026)",
+      "why_read": "Explication juridique et opérationnelle de l’IFR BIS sur l’accès distant aux puces avancées (seuils TPP, pays visés, présomptions pour fabs/OSAT). Indispensable pour juristes, responsables export et dirigeants d’infrastructures AI.",
+      "url": "https://www.milbank.com/a/web/6RSNqHv4TbB2hwe6uLWmVQ/nov-2026-grns-client-alert_bis-issues-new-rule-restricting-remote-access-to-advanced-chips.pdf"
     }
   ],
   "editorial": {
-    "title": "Souveraineté industrielle et choc tarifaire: deux fronts liés",
-    "text": "La double tempête — relance des tarifs américains et accélération des capacités industrielles de défense en Europe — oblige entreprises et décideurs à concilier résilience et compétitivité. Les chaînes d’approvisionnement doivent être reconfigurées : diversification fournisseurs, relocalisations ciblées et priorisation des composants critiques. Pour les dirigeants, la priorité opérationnelle est claire : plan de continuité logistique à 18–36 mois et dialogue industriel public‑privé immédiat."
+    "title": "Gouvernance, sécurité et dépendance industrielle",
+    "text": "La conjonction cette semaine — réintégration de Jensen Huang, blacklistage de Megaspeed et durcissement des règles BIS — montre que la frontière entre gouvernance d’entreprise, politique industrielle et sécurité nationale s’est effondrée. Les marchés récompensent le statu quo tandis que Washington et les régulateurs cherchent à contenir des vecteurs d’évasion technique. Attendre une correction cohérente des chaînes d’approvisionnement sans règles financières et de gouvernance renforcées serait une erreur stratégique."
   },
   "news": [
     {
-      "title": "États‑Unis propose droits de douane sur 14 pays",
-      "category": "macro/marchés",
-      "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
+      "title": "US met Megaspeed sur la liste d'entités",
+      "category": "géopolitique / export controls",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23999/additions-to-the-entity-list"
     },
     {
-      "title": "Repli global des marchés après vagues tarifaires",
-      "category": "macro/marchés",
-      "url": "https://www.investing.com/news/stock-market-news/european-shares-rise-on-consumer-boost-markets-await-us-tariffs-inflation-5049970"
+      "title": "Réintégration de Jensen Huang chez Nvidia",
+      "category": "marchés / gouvernance",
+      "url": "https://www.investing.com/news/economy-news/nvidia-reinstates-jensen-huang-as-ceo-igniting-tech-surge-5045917"
     },
     {
-      "title": "DGA commande 50 000 obus à KNDS Ammo France",
-      "category": "défense / industrie",
-      "url": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Communiqu%C3%A9_A_Obus%20de%20155%20mm%20%20la%20DGA%20adresse%20%C3%A0%20KNDS%20Ammo%20France%20une%20double%20commande.pdf"
+      "title": "FinCEN : systèmes coupés après cyberattaque",
+      "category": "cybersécurité / finance",
+      "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
     }
   ],
   "readings": [
     {
-      "title": "Delair, la pépite toulousaine devenue le Toyota",
-      "source": "OpexNews",
-      "url": "https://opexnews.fr/delair-toyota-drone-toulouse-reussite-aspik/"
+      "title": "Quel C2 pour l’armée française à l’ère de l’IA ?",
+      "source": "OpexNews (12 nov. 2026)",
+      "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
+    },
+    {
+      "title": "Update on Nov 2026 security incident",
+      "source": "1Password (25 nov. 2026)",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
     }
   ],
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "edition": "THE SIGNAL"
 }
