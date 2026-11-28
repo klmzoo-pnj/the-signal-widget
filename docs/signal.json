@@ -1,139 +1,125 @@
 {
   "critical": [
     {
-      "title": "US met Megaspeed sur la liste d'entités",
-      "category": "géopolitique / export controls",
-      "summary": "Le Département du Commerce (BIS) a ajouté Megaspeed International et six entités liées à l'opérateur cloud à l'Entity List (règle finale déposée 23 nov., publiée 25 nov. 2026). Mesure contraignante: licences présumées refusées pour produits américains. Pourquoi ça compte: c'est la première utilisation récente de la liste pour fermer une voie de contournement d'exportation d'IA via centres de données en Asie du Sud‑Est, avec risque de rétorsions et d'impact sur chaînes d'approvisionnement de data centers.",
-      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23999/additions-to-the-entity-list"
+      "title": "Nvidia rétablit Jensen Huang comme PDG",
+      "category": "technologie / marchés",
+      "summary": "Le conseil d’administration de NVIDIA a voté à l’unanimité le 23 novembre 2026 pour réintégrer Jensen Huang comme président, CEO et administrateur, d’après le communiqué officiel et le dépôt 8‑K. L’annonce a ravivé l’appétit pour les valeurs AI mais a aussi relancé les risques de gouvernance et d’enquêtes réglementaires ; c’est un signal majeur pour la chaîne d’approvisionnement des semi‑conducteurs et la politique industrielle américaine.",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/"
     },
     {
-      "title": "Réintégration de Jensen Huang chez Nvidia",
-      "category": "marchés / gouvernance",
-      "summary": "Le conseil d'administration de Nvidia a réintégré Jen‑Hsun (Jensen) Huang comme président et CEO, annonce effective 23 nov. 2026; décision intervenue après interventions politiques de haut niveau. Pourquoi ça compte: le retour du fondateur a déclenché un bond massif des titres, mais pose un dilemme de gouvernance et de risque souverain — marchés, régulateurs et Washington doivent désormais concilier sécurité nationale, conformité export et stabilité industrielle.",
-      "url": "https://www.investing.com/news/economy-news/nvidia-reinstates-jensen-huang-as-ceo-igniting-tech-surge-5045917"
+      "title": "Règle US: accès distant aux puces restreint",
+      "category": "géopolitique / chaîne d'approvisionnement",
+      "summary": "Le Département du Commerce (BIS) a publié une interim final rule (« Addressing Remote Access to Advanced Semiconductors ») entrée en vigueur le 19 novembre 2026, imposant des licences pour l’accès distant et des contrôles spécifiques vers cinq pays et des data centers à risque. La mesure ferme une voie de contournement (location d’instances) et impose un délai de transition aux opérateurs existants, redessinant les options d’export et d’hébergement de capacité AI hors‑États‑Unis.",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm"
     },
     {
-      "title": "FinCEN : systèmes coupés après cyberattaque",
-      "category": "cybersécurité / finance",
-      "summary": "FinCEN (Treasury) a annoncé une intrusion entraînant l'isolement de « certains systèmes » et a publié l'Ordre FIN‑2026‑R002 (24 nov. 2026) accordant des délais exceptionnels pour certains envois BSA/BOI jusqu'au 30 déc. 2026. Pourquoi ça compte: perturbe la chaîne de conformité AML/CTF, force les banques et fournisseurs à réajuster processus et échéances, et soulève questions opérationnelles sur la résilience des systèmes de renseignement financier.",
-      "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
+      "title": "UE: adaptation du calendrier d’application de l’AI Act",
+      "category": "régulation / IA",
+      "summary": "Le Conseil européen a formalisé en 2026 des mesures d’« omnibus » pour simplifier l’application de l’AI Act (implémentation d’actes délégués et reports ciblés). Des lignes directrices et des délais modifiés (transparence, sandboxes, QMS) sont publiés et contraignent déjà la feuille de route de déploiement des fournisseurs et des industriels européens avant les échéances de décembre 2026‑2027.",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/pdf/"
+    },
+    {
+      "title": "S&P place Nvidia en \"CreditWatch\" négatif",
+      "category": "finance / marchés",
+      "summary": "Le 25 novembre 2026 S&P Global Ratings a placé la notation AA de NVIDIA sur CreditWatch Negative, citant des risques de gestion, de gouvernance et le « key‑man risk » lié à la succession du CEO. La démarche ouvre une revue pouvant aboutir à une baisse de notation en ~90 jours, avec des implications directes sur le coût de la dette et le financement de projets d’infrastructure AI.",
+      "url": "https://www.streetinsider.com/Reuters/S%26P%2BGlobal%2Bplaces%2BNvidia%2Brating%2Bon%2B%27CreditWatch%2BNegative%27%2Bon%2Brising%2Bmanagement%2Band%2Bgovernance%2Brisks/27401473.html"
     }
   ],
   "radar": [
     {
-      "title": "Nvidia stoppe livraisons serveurs en Asie",
-      "category": "supply chain / export controls",
-      "summary": "Fait (26 nov. 2026) : le Financial Times, repris par Reuters, rapporte que Nvidia a demandé à ses assembleurs (Dell, Supermicro) de suspendre l’expédition de serveurs contenant ses puces vers la Malaisie, Singapour, la Thaïlande et l’Indonésie. Contexte : suit la règle BIS du 19 nov. ciblant l'accès à distance aux puces avancées. Le signal : attente de rétractation ou durcissement des contrôles peut bloquer projets datacenter et fragiliser financements d'infrastructures AI en Asie du Sud‑Est.",
-      "url": "https://www.reuters.com/technology/nvidia-halts-server-shipments-four-southeast-asian-countries-ft-2026-11-26/"
+      "title": "Pause des livraisons NVIDIA en Asie du Sud‑Est",
+      "category": "supply‑chain / industrie",
+      "summary": "Faits (26 nov. 2026) : plusieurs titres (FT, WSJ) rapportent que NVIDIA a demandé à des assembleurs/partenaires (Dell, Supermicro) de suspendre l’expédition de serveurs contenant ses puces vers Malaisie, Singapour, Thaïlande et Indonésie. Contexte : réponse immédiate à la règle BIS du 19 nov. restreignant l’accès distant aux GPU. Le signal : interruption opérationnelle et blocage de financements de gros projets cloud régionaux — tester la résilience des fournisseurs et réorienter la demande hors région.",
+      "url": "https://www.wsj.com/tech/nvidia-tells-partners-to-pause-shipments-to-southeast-asia-5b791cb0"
     },
     {
-      "title": "1Password : intrusion via compte GitHub",
-      "category": "cybersécurité / SaaS",
-      "summary": "Fait (25 nov. 2026) : 1Password indique qu’un attaquant a compromis un compte GitHub d’un employé (investigation ouverte depuis 19 nov.), a poussé du code malveillant et copié des données administratives d’un sous‑ensemble de clients (noms, e‑mails, identifiants, métadonnées). Contexte : l’incident n’a pas compromis les coffres chiffrés (vaults). Le signal : renforce l’attention sur la chaîne CI/CD, le risque fournisseur et l’urgence de durcir accès aux dépôts et aux tokens CI/CD.",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
-    },
-    {
-      "title": "CISA ajoute 10 failles actives au KEV",
-      "category": "cybersécurité / vulnérabilités",
-      "summary": "Fait (25 nov. 2026) : CISA a ajouté dix vulnérabilités exploitées au catalogue Known Exploited Vulnerabilities — dont cinq failles Mitel MiCollab, des CVE sur Juniper Session Smart, Vates Xen Orchestra et des contrôleurs Danfoss. Contexte : ajout impose des délais de remédiation pour agences fédérales et clients critiques. Le signal : élargissement rapide du périmètre d’urgence opérationnelle, pression immédiate sur équipes IT et fournisseurs d'infrastructures industrielles et de communications.",
-      "url": "https://cvetodo.com/threat-report"
+      "title": "Blocage de prêts (~500 M$) sur projets cloud régionaux",
+      "category": "finance / chaîne d'approvisionnement",
+      "summary": "Faits (26 nov. 2026) : le Financial Times et reprises rapportent que des banques ont gelé près de 0,5 Md$ de prêts (projets liés à Aolani et capacités louées à des groupes chinois) à la suite des nouveaux contrôles d’export. Contexte : réactions de marché et de financement immédiates à l’IFR BIS. Le signal : financement d’infrastructure cloud et projets souverains en Asie du Sud‑Est sont désormais soumis à une due‑diligence renforcée — risque de gel ou de renégociation des deals en cours.",
+      "url": "https://www.siliconreport.com/nvidia-halts-southeast-asia-server-shipments-ft-reports"
     }
   ],
   "intelligence": [
     {
-      "title": "Réseau OSINT du CIA/ODNI compromis",
-      "category": "renseignement / cyber",
-      "summary": "Fait (24 nov. 2026) : plusieurs médias (The New York Times, AP, CNN) rapportent qu’un système non classifié utilisé pour l’analyse d’OSINT par la CIA et l’ODNI a été compromis ; les agences indiquent qu’aucun système classifié n’a été touché et que l’incident est résolu. Contexte : s’inscrit dans une série d’incidents gouvernementaux récents. Le signal : exposé des capacités d’analyse open‑source et risque d’usage adversaire des métadonnées collectées ; à surveiller pour impacts sur méthode et sources d’analyse du renseignement.",
-      "url": "https://www.apnews.com/article/cia-cyberattack-unclassified-system-bfa6d3b02e3b0e2779dfb613c900bd77"
+      "title": "Pas de preuve d’une orchestration chinoise dans l’affaire Huang",
+      "category": "renseignement / contre‑espionnage",
+      "summary": "Fait vérifié (25 nov. 2026) : des responsables US ont dit à des staffers du Congrès qu’ils n’avaient pas trouvé de preuve que des services chinois avaient ordonné à l’exécutive liée à Jensen Huang d’espionner ce dernier, selon des comptes rendus publiés. Contexte : briefing classifié cité par la presse (WSJ/Reuters). Signal : affaiblit l’hypothèse d’une opération coordonnée de Pékin mais maintient le risque politique et la nécessité d’audits de sécurité industrielle.",
+      "url": "https://ca.investing.com/news/stock-market-news/us-finds-no-evidence-china-directed-executive-to-spy-on-nvidia-ceo-wsj-reports-5051236"
     }
   ],
   "data_points": [
     {
-      "label": "Commerce Dept. – Ajouts Entity List (23–25 nov 2026)",
-      "value": "7 entités",
-      "context": "Ajout de Megaspeed International et six entités affiliées (règle finale déposée 23 nov., publication FR 25 nov. 2026), prescriptions BIS sur licences d’export.",
-      "comparison": "vs 0 ajouts notés depuis octobre 2025 selon reportages Reuters (dernier placement comparable en oct. 2025).",
-      "stakes": "Bloque des vecteurs de contournement d’export (remote compute) et augmente le coût/risque pour opérateurs cloud et banques finançant datacenters en SEA.",
-      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23999/additions-to-the-entity-list"
+      "label": "BIS — délai de transition pour data centers existants (Nov 19, 2026)",
+      "value": "90 jours",
+      "context": "Période accordée aux opérateurs existants pour obtenir une licence sous l’interim final rule publiée le 19/11/2026.",
+      "comparison": "90 jours accordés depuis l’entrée en vigueur (19/11/2026) vs 0 jour avant la règle (pas d’obligation de licence pour accès distant).",
+      "stakes": "Donne un relais temporel aux opérateurs mais crée une fenêtre de conformité qui peut bloquer projets et financements si non respectée.",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm"
     },
     {
-      "label": "FinCEN – Ordre FIN‑2026‑R002 (24 nov. 2026)",
-      "value": "+42 j",
-      "context": "Relève les dépôts BSA/BOI prévus du 18 nov.–29 déc. 2026: échéance commune repoussée au 30 déc. 2026 (relief technique et opérations).",
-      "comparison": "vs aucune tolérance exceptionnelle avant l’ordre — le report maximum pour une échéance du 18 nov. est de 42 jours (18 nov. → 30 déc.).",
-      "stakes": "Resserre la gestion opérationnelle des banques et filières AML, retarde certains rapports utiles aux enquêtes et impose réallocation de capacités IT/compliance.",
-      "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
+      "label": "NVDA — rebond intraday après réintégration (23/11/2026)",
+      "value": "+30%",
+      "context": "Hausse intrajournalière (pré‑ouverture) du cours NVDA le 23 nov. 2026 après l’annonce de la réintégration de Jensen Huang.",
+      "comparison": "+30% le 23/11/2026 vs - (cours la veille) ; ouverture à ~111,50$ vs prix d’IPO point‑de‑référence (événements de marché).",
+      "stakes": "Montre la sensibilité extrême du marché AI à la gouvernance de NVIDIA ; volatilité risque d’affecter financements et partenaires fournisseurs.",
+      "url": "https://www.investing.com/news/stock-market-news/nvidia-reinstates-jensen-huang-as-ceo-5045809"
     },
     {
-      "label": "Réaction marché – Nvidia (23 nov. 2026)",
-      "value": "+31%",
-      "context": "Cours NVDA bondit d’environ +30–31% le 23 nov. 2026 à l’annonce de la réintégration de Jensen Huang comme CEO, entraînant un rebond des valeurs AI.",
-      "comparison": "vs S&P 500 +4,7% le même jour (effet macro‑tech/risque gouvernance contrasté).",
-      "stakes": "Montre la sensibilité extrême des marchés à la gouvernance des acteurs clés de l’écosystème IA; intensifie pressions politiques et régulatoires sur Nvidia et ses clients.",
-      "url": "https://www.investing.com/news/economy-news/nvidia-reinstates-jensen-huang-as-ceo-igniting-tech-surge-5045917"
-    },
-    {
-      "label": "CISA KEV – Nouveaux ajouts (25 nov. 2026)",
-      "value": "10 CVE",
-      "context": "CISA a inscrit dix vulnérabilités actives au catalogue KEV (5 Mitel MiCollab, Juniper Session Smart, Vates Xen Orchestra, 3 Danfoss), publication et obligations de remédiation fin nov. 2026.",
-      "comparison": "augmentation nette du catalogue (ex. total rapporté passé ~1,795 → ~1,805, soit +10 entrées ce jour).",
-      "stakes": "Oblige remédiation accélérée pour agences fédérales et opérateurs critiques; accentue risque opérationnel immédiat pour communications et OT/ICS.",
-      "url": "https://cvetodo.com/threat-report"
+      "label": "Montant rapporté bloqué sur prêts cloud régionaux",
+      "value": "~500 M$",
+      "context": "Montant approximatif des prêts mis en pause par des banques pour des projets cloud (Aolani et financements liés) rapporté après la règle BIS et l’annonce de suspension de livraisons.",
+      "comparison": "~500 M$ suspendus (26/11/2026) vs 0 M$ avant annonce BIS/gel des livraisons ; chiffrage cité par le FT et reprises.",
+      "stakes": "Illustre le lien direct entre contrôles export, disponibilité matérielle et risque de projet/financement — menace la capacité d’expansion des néo‑clouds en Asie.",
+      "url": "https://www.siliconreport.com/nvidia-halts-southeast-asia-server-shipments-ft-reports"
     }
   ],
   "reading_room": [
     {
-      "title": "Quel C2 pour l’armée française à l’ère de l’IA ?",
-      "source": "OpexNews (12 nov. 2026)",
-      "why_read": "Analyse approfondie des enjeux de commandement (C2) dans les forces armées françaises face à l’adoption de l’IA : dépendances logicielles, souveraineté des chaînes et choix d’architectures. Utile pour comprendre risques BITD et contraintes d’intégration opérationnelle.",
-      "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
+      "title": "No Evidence China Orchestrated Jensen Huang’s Affair",
+      "source": "The Wall Street Journal",
+      "why_read": "Enquête de première ligne sur le volet de contre‑espionnage et la communication entre services de renseignement et élus ; essentiel pour comprendre la solidité des évaluations publiques et la responsabilité des entreprises face aux risques d’influence étrangère.",
+      "url": "https://www.wsj.com/articles/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-116687?mod=hp_lead_pos1"
     },
     {
-      "title": "Update on Nov 2026 security incident",
-      "source": "1Password (25 nov. 2026)",
-      "why_read": "Note technique et chronologie officielle d’un incident CI/CD via compte GitHub compromis : quels métadonnées clients ont été copiées, mesures prises et implications pour la sécurité des chaînes de production logicielle. Lecture indispensable pour RSSI et DSI SaaS.",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
-    },
-    {
-      "title": "BIS Issues New Rule Restricting Remote Access to Advanced Chips",
-      "source": "Milbank client alert (Nov 2026)",
-      "why_read": "Explication juridique et opérationnelle de l’IFR BIS sur l’accès distant aux puces avancées (seuils TPP, pays visés, présomptions pour fabs/OSAT). Indispensable pour juristes, responsables export et dirigeants d’infrastructures AI.",
-      "url": "https://www.milbank.com/a/web/6RSNqHv4TbB2hwe6uLWmVQ/nov-2026-grns-client-alert_bis-issues-new-rule-restricting-remote-access-to-advanced-chips.pdf"
+      "title": "Addressing Remote Access to Advanced Semiconductors (IFR)",
+      "source": "Federal Register (texte officiel)",
+      "why_read": "Texte réglementaire complet publié le 19/11/2026 : lecture indispensable pour évaluer obligations de licence, périmètres pays, exceptions et fenêtre de transition qui bouleversent immédiatement les ventes et la finance liées aux GPU avancés.",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm"
     }
   ],
   "editorial": {
-    "title": "Gouvernance, sécurité et dépendance industrielle",
-    "text": "La conjonction cette semaine — réintégration de Jensen Huang, blacklistage de Megaspeed et durcissement des règles BIS — montre que la frontière entre gouvernance d’entreprise, politique industrielle et sécurité nationale s’est effondrée. Les marchés récompensent le statu quo tandis que Washington et les régulateurs cherchent à contenir des vecteurs d’évasion technique. Attendre une correction cohérente des chaînes d’approvisionnement sans règles financières et de gouvernance renforcées serait une erreur stratégique."
+    "title": "Gouvernance, souveraineté tech et coûts cachés de l’IA",
+    "text": "La crise NVIDIA illustre un enchevêtrement nouveau : gouvernance d’entreprise, risques de contre‑espionnage et politique industrielle forcent les décideurs à arbitrer entre accès au compute et contrôle national. Les règles d’export et l’AI Act modifient la matrice économique des acteurs cloud et chipmakers ; l’UE et les entreprises européennes doivent accélérer souveraineté productive (fonderies, logiciels, vérification) pour éviter d’être dépendants des décisions extra‑européennes qui redistribuent instantanément capacités et financements."
   },
   "news": [
     {
-      "title": "US met Megaspeed sur la liste d'entités",
-      "category": "géopolitique / export controls",
-      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23999/additions-to-the-entity-list"
+      "title": "Nvidia rétablit Jensen Huang comme PDG",
+      "category": "technologie / marchés",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/"
     },
     {
-      "title": "Réintégration de Jensen Huang chez Nvidia",
-      "category": "marchés / gouvernance",
-      "url": "https://www.investing.com/news/economy-news/nvidia-reinstates-jensen-huang-as-ceo-igniting-tech-surge-5045917"
+      "title": "Règle US: accès distant aux puces restreint",
+      "category": "géopolitique / chaîne d'approvisionnement",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm"
     },
     {
-      "title": "FinCEN : systèmes coupés après cyberattaque",
-      "category": "cybersécurité / finance",
-      "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
+      "title": "UE: adaptation du calendrier d’application de l’AI Act",
+      "category": "régulation / IA",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/pdf/"
     }
   ],
   "readings": [
     {
-      "title": "Quel C2 pour l’armée française à l’ère de l’IA ?",
-      "source": "OpexNews (12 nov. 2026)",
-      "url": "https://opexnews.fr/commandement-c2-connecte-armee-francaise/"
+      "title": "No Evidence China Orchestrated Jensen Huang’s",
+      "source": "The Wall Street Journal",
+      "url": "https://www.wsj.com/articles/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-116687?mod=hp_lead_pos1"
     },
     {
-      "title": "Update on Nov 2026 security incident",
-      "source": "1Password (25 nov. 2026)",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+      "title": "Addressing Remote Access to Advanced",
+      "source": "Federal Register (texte officiel)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm"
     }
   ],
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "edition": "THE SIGNAL"
 }
